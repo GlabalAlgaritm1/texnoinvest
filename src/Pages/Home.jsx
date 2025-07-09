@@ -1,0 +1,382 @@
+import React, { useState } from 'react';
+import rasm1 from '../img/img-logo/bir.png';
+import rasm2 from '../img/img-logo/ikki.png'
+import rasm3 from '../img/img-logo/uch.svg'
+import rasm4 from '../img/img-logo/tort.svg'
+import rasm5 from '../img/img-logo/besh.svg'
+import rasm6 from '../img/img-logo/olti.svg'
+import rasm7 from '../img/img-logo/yetti.svg'
+import rasm8 from '../img/img-logo/sakkiz.svg'
+import rasm9 from '../img/img-logo/toqiz.svg'
+import rasm10 from '../img/img-logo/on.svg'
+import rasm11 from '../img/img-logo/onbir.svg'
+import rasm13 from '../img/img-logo/onuch.svg'
+import rasm14 from '../img/img-logo/rasm14.svg'
+import rasm15 from '../img/img-logo/rasm15.svg'
+import rasm16 from '../img/img-logo/rasm16.svg'
+import rasm17 from '../img/img-logo/rasm17.svg'
+import rasm18 from '../img/img-logo/rasm18.svg'
+import rasm19 from '../img/img-logo/rasm20.svg'
+import rasm21 from '../img/img-logo/Untitled-1.jpg'
+import rasm22 from '../img/img-logo/Untitled-2.jpg'
+import rasm23 from '../img/img-logo/Untitled-3.jpg'
+import rasm24 from '../img/img-logo/Untitled-4.jpg'
+import rasm25 from '../img/img-logo/Untitled-5.jpg'
+import rasm26 from '../img/img-logo/Untitled-6.jpg'
+import rasm27 from '../img/img-logo/Untitled-7.jpg'
+import rasm28 from '../img/img-logo/Untitled-8.jpg'
+import rasm29 from '../img/img-logo/rasm21.jpg'
+import rasm30 from '../img/img-logo/rasm22.jpg'
+import rasm31 from '../img/img-logo/rasm23.jpg'
+
+
+
+
+import { Link } from 'react-router';
+
+
+const Home = () => {
+  const years = [
+    2004, 2005, 2006, 2007, 2008, 2009, 2010,
+    2011, 2012, 2013, 2014, 2015, 2016, 2017,
+    2018, 2019, 2020, 2021, 2022,
+  ];
+
+  // Faqat shu qator o'zgardi:
+  const [selectedYear, setSelectedYear] = useState(years[years.length - 1]);
+
+  // Yillar bo'yicha ma'lumotlar
+  const yearData = {
+    2004: "The German company 'Steinert Industries GmbH' launched large-scale construction of a glass processing plant. In October, the opening of the Plant took place under the legal name of 'Texnoinvest-ST' LLC",
+    2005: "Launch of a high-tech glass cutting line of BYSTRONIC MASCHINEN AG (Switzerland) and launch of an automated line for the production of double-glazed windows. We are taking part in the glazing of the Northern Train-station in Tashkent.",
+    2006: "Active development of the enterprise, and installation of glass edge processing equipment. Installation of waterjet cutting, which made it possible to begin the process of cutting complex shapes without restrictions on thickness and material. Installation of a glass tempering furnace, making glass safe to use in interiors.",
+    2007: "A new direction in work, the production of glass partitions, doorways, shower stalls and glazing using safety tempered glass. Launch of a furniture workshop based entirely on automated equipment from the best German companies such as ALTENDORF and BRANDT. Launch of a metal structures workshop. We glazed the building of the Uzexportcenter and also completed many forged elements on the territory of the Uzexportcenter.",
+    2008: "Expansion of production capabilities, production of laminated and curved glass. Launch of a line for the production of plastic PVC windows made from German profiles (Funke Kunststoffe GmbH).",
+    2009: "In response to the demand not only for durable but also for beautiful, decorative glass, artistic glass processing is actively developing. We purchased and installed glass tempering furnaces and are developing a new direction – fusing. We installed equipment for the production of stained glass and began producing glass products under the TECHNOART brand. We purchased an automatic installation for sandblasting glass.",
+    2010: "We are increasing the production volume of the double-glazed window line by 30%. The BEELINE head office in Tashkent was glazed.",
+    2011: "We increased the production volume of tempered glass, producing over 250,000 sq.m. per year. The MTS head office building in Tashkent was glazed.",
+    2012: "Improved the quality of products. The best specialists of the enterprise completed internships in Germany, Russia, and Kyrgyzstan.",
+    2013: "The Museum of the Armed Forces in Tashkent was glazed. Active work is underway to glaze luxury real estate in new buildings in the city of Tashkent, using energy-saving double-glazed windows.",
+    2014: "Global and interesting work was carried out: together with the Caravan Group company, they reconstructed the CIP airport building and VIP lounges. Completed over 3,000 private orders.",
+    2015: "A contract was signed for the glazing of terminal 3 of the Tashkent airport. Glazing of the central bazaar 'Alai' in Tashkent.",
+    2016: "We have increased the production volume of double-glazed windows; we produce double-glazed windows for plastic windows (over 900 packages per shift). We produced a lot of glass products for objects related to the SCO 2016 summit in Tashkent.",
+    2017: "Active development of the furniture workshop. Installation of a new Italian machine ROVER A SMART for wood processing. Now the plant provides services for the production of many types of wood products (tables, chairs, display cases, sideboards, cabinets, cabinet, beds), as well as the production of ornaments and patterns of any complexity.",
+    2018: "We increased the production volume of double-glazed windows (over 900 packages per shift) for plastic windows. We launched the first printer in Uzbekistan that prints on glass with ceramic inks of the DIP-Tech brand.",
+    2019: "The plant of Technoinvest-ST LLC is a multi-industry complex that has become one of the leading enterprises in Uzbekistan in the industrial glass processing market. The experience of the company's employees, combined with its technical equipment, guarantees high-quality products and fulfillment of orders in the shortest possible time.",
+    2020: "Despite the global pandemic, Technoinvest-ST LLC continues to actively increase production and sales volumes, guaranteeing high quality and fast order fulfillment times. For the first time in Uzbekistan, modern sun protection and multifunctional double-glazed windows with increased energy efficiency are presented.",
+    2021: "The company has opened an additional glass processing workshop and installed a lot of necessary equipment. A new multifunctional machine from the Italian company Intermac was also installed. Now the plant has the ability to fulfill twice as many orders in the same time frame.",
+    2022: "Technoinvest-ST LLC begins working with large construction companies. Thus, the glazing of the Infinity residential complex and the Dynasty residential complex (Golden House) was carried out, and together with Enter Engineering, the glazing of hotels and centers was carried out for the SCO summit in Samarkand. In addition, more than 1,500 orders for the production of glass products have been completed.",
+  };
+
+  return (
+    <section className="py-10">
+
+      {/* 1 */}
+
+      <div className="flex gap-40 pt-5">
+        <div className="flex flex-col space-y-3">
+          <h1 className="text-4xl mb-2">«TECHNOINVEST-ST» LLC</h1>
+          <p className="w-full max-w-[500px]">
+            A recognized leader in the Uzbekistan market in the production and processing of sheet glass, and the manufacture of windows and facade structures.
+          </p>
+          <div>
+            <button className="bg-green-500 border inline-block border-black my-10 p-3 py-10 rounded-full hover:bg-green-700 hover:transition-all hover:duration-200">
+              Learn more
+            </button>
+          </div>
+        </div>
+        <div className="col-lg-6 text-center">
+          <img
+            className="w-72 shadow-2xl shadow-green-500"
+            src={rasm1}
+            alt="Glass Building"
+          />
+        </div>
+      </div>
+
+      {/* 2 */}
+
+      <div>
+        <h2 className='text-4xl'>
+          Our key indicators
+        </h2>
+        <div className="grid grid-cols-4 gap-5 mt-6">
+          <div className='flex flex-col border-t-2 border-gray-400 space-y-5 pt-4'>
+            <span className='font-semibold text-4xl text-green-500'>19</span>
+            <span>years on the market</span>
+          </div>
+          <div className='flex flex-col border-t-2 border-gray-400 space-y-5 pt-4'>
+            <span className='font-semibold text-4xl text-green-500'>3000+</span>
+            <span>clients</span>
+          </div>
+          <div className='flex flex-col border-t-2 border-gray-400 space-y-5 pt-4'>
+            <span className='font-semibold text-4xl text-green-500'>200</span>
+            <span>employees</span>
+          </div>
+          <div className='flex flex-col border-t-2 border-gray-400 space-y-5 pt-4'>
+            <span className='font-semibold text-4xl text-green-500'>2000</span>
+            <span>completed objects</span>
+          </div>
+        </div>
+      </div>
+
+      {/* 3 */}
+      <div className="pt-10">
+        <div className="grid grid-cols-16 gap-2">
+          {years.map((year) => (
+            <button
+              key={year}
+              onClick={() => setSelectedYear(year)}
+              className={`rounded-full px-1 py-4 border border-black/5 ${selectedYear === year ? 'bg-green-500 text-white' : 'bg-transparent'
+                }`}
+            >
+              {year}
+            </button>
+          ))}
+        </div>
+
+        {/* Tanlangan yil ma'lumoti */}
+        <div className="mt-6 p-4 text-center">
+          <p className="text-lg w-full max-w-[450px] mx-auto">
+            {yearData[selectedYear]}
+          </p>
+        </div>
+      </div>
+
+      {/* 4 */}
+
+      <div>
+        <h2 className='text-6xl font-semibold text-center pb-2 mt-3'>Our History</h2>
+        <div
+          className="w-full h-screen bg-cover bg-center"
+          style={{ backgroundImage: `url(${rasm2})` }}
+        >
+        </div>
+      </div>
+
+      {/* 5 */}
+
+      <div>
+        <h2 className='text-3xl pb-14 pt-16'>
+          Production
+        </h2>
+
+        <div className="grid grid-cols-3 gap-7">
+          <Link className='flex items-start gap-2'>
+            <img src={rasm3} alt="" />
+            <p className='text-xl'>
+              Construction glass
+            </p>
+          </Link>
+
+          <Link className='flex items-start gap-2'>
+            <img src={rasm6} alt="" />
+            <p className='text-xl'>
+              Bent glass
+            </p>
+          </Link>
+          <Link className='flex items-start gap-2'>
+            <img src={rasm10} alt="" />
+            <p className='text-xl'>
+              Construction glass
+            </p>
+          </Link>
+          <Link className='flex items-start gap-2'>
+            <img src={rasm4} alt="" />
+            <p className='text-xl'>
+              Construction glass
+            </p>
+          </Link>
+
+          <Link className='flex items-start gap-2'>
+            <img src={rasm7} alt="" />
+            <p className='text-xl'>
+              Construction glass
+            </p>
+          </Link>
+          <Link className='flex items-start gap-2'>
+            <img src={rasm11} alt="" />
+            <p className='text-xl'>
+              Construction glass
+            </p>
+          </Link>
+          <Link className='flex items-start gap-2'>
+            <img src={rasm5} alt="" />
+            <p className='text-xl'>
+              Construction glass
+            </p>
+          </Link>
+          <Link className='flex items-start gap-2'>
+            <img src={rasm9} alt="" />
+            <p className='text-xl'>
+              Construction glass
+            </p>
+          </Link>
+          <Link className='flex items-start gap-2'>
+            <img src={rasm13} alt="" />
+            <p className='text-xl'>
+              Construction glass
+            </p>
+          </Link>
+        </div>
+      </div>
+
+      {/* 6 */}
+
+      <div>
+        <h2 className='text-3xl pb-14 pt-16'>
+          Why choose us?
+        </h2>
+        <div className="grid grid-cols-3 gap-5">
+          <div className='border border-[#222121]  flex flex-col items-center p-5'>
+            <img className='pb-2' src={rasm14} alt="" />
+            <p>
+              Grandiose production capabilities
+            </p>
+          </div>
+          <div className='border border-[#222121]  flex flex-col items-center p-5'>
+            <img className='pb-2' src={rasm15} alt="" />
+            <p>
+              Quality at the highest level
+            </p>
+          </div>
+          <div className='border border-[#222121]  flex flex-col items-center p-5'>
+            <img className='pb-2' src={rasm16} alt="" />
+            <p>
+              Delivery to CIS countries
+            </p>
+          </div>
+          <div className='border border-[#222121]  flex flex-col items-center p-5'>
+            <img className='pb-2' src={rasm17} alt="" />
+            <p>
+              First-class specialists
+            </p>
+          </div>
+          <div className='border border-[#222121]  flex flex-col items-center p-5'>
+            <img className='pb-2' src={rasm18} alt="" />
+            <p>
+              Extensive work experience
+            </p>
+          </div>
+          <div className='border border-[#222121]  flex flex-col items-center p-5'>
+            <img className='pb-2' src={rasm19} alt="" />
+            <p>
+              High speed of order fulfillment
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      {/* 7 */}
+
+      <div>
+        <h2 className='text-3xl pb-14 pt-16'>
+          Our work
+        </h2>
+        <div className='flex items-center gap-5 pb-8'>
+          <img className='w-[350px] h-[477px]' src={rasm21} alt="" />
+          <img className='w-[350px] h-[477px]' src={rasm22} alt="" />
+          <img className='w-[350px] h-[477px]' src={rasm23} alt="" />
+        </div>
+        <div className='flex items-center gap-5 pb-8'>
+          <img className='w-[546px] h-[327px]' src={rasm24} alt="" />
+          <img className='w-[546px] h-[327px]' src={rasm25} alt="" />
+        </div>
+        <div className='flex items-center gap-5 pb-8'>
+          <img className='w-[350px] h-[477px]' src={rasm26} alt="" />
+          <img className='w-[350px] h-[477px]' src={rasm27} alt="" />
+          <img className='w-[350px] h-[477px]' src={rasm28} alt="" />
+        </div>
+      </div>
+
+      {/* 8 */}
+
+      <div>
+        <h2 className='text-3xl pb-14 pt-16'>
+          Latest news
+        </h2>
+
+        {/* 1 */}
+
+        <div>
+          <div className='flex items-center'>
+            <span className='text-3xl font-semibold mr-12'>
+              01
+            </span>
+            <span className='border border-[#4b4949] w-full my-12'></span>
+          </div>
+          <div className='flex items-center gap-14'>
+            <div className='w-full max-w-[750px] px-5 mx-auto  ml-12'>
+              <h3 className='text-green-500 text-2xl my-7'>
+                Hot promotion on glass products 10 mm with <br /> tempering
+              </h3>
+              <p className='my-6'>Hurry up to purchase 10 mm tempered glass products at a super price - 145,000 sum/sq.m. The promotion is valid for any volume. Production time - up to 7 <br /> working days. Hurry! The promotion period is limited.
+              </p>
+              <Link className='text-[#6e6b6b] '>Learn more</Link>
+            </div>
+            <div>
+              <img src={rasm29} alt="" />
+            </div>
+          </div>
+        </div>
+
+        {/* 2 */}
+
+        <div>
+          <div className='flex items-center'>
+            <span className='text-3xl font-semibold mr-12'>
+              02
+            </span>
+            <span className='border border-[#4b4949] w-full  my-12'></span>
+          </div>
+          <div className='flex items-center gap-14'>
+            <div className='w-full max-w-[750px] px-5 mx-auto  ml-12'>
+              <h3 className='text-green-500 text-2xl my-7'>
+                Promotion on double-glazed windows!
+              </h3>
+              <p className='my-6'>
+                Dear friends! We hasten to please you with amazing news. Do you want to save money when ordering double-glazed windows?
+                IP LLC “TEXNOINVEST-ST” announces the start of a Super Promotion!
+              </p>
+              <Link className='text-[#6e6b6b] '>Learn more</Link>
+            </div>
+            <div>
+              <img src={rasm30} alt="" />
+            </div>
+          </div>
+        </div>
+
+        {/* 3 */}
+
+        <div>
+          <div className='flex items-center'>
+            <span className='text-3xl font-semibold mr-12'>
+              03
+            </span>
+            <span className='border border-[#4b4949] w-full  my-12'></span>
+          </div>
+          <div className='flex items-center gap-14'>
+            <div className='w-full max-w-[750px] px-5 mx-auto  ml-12'>
+              <h3 className='text-green-500 text-2xl my-7'>
+                New printer
+              </h3>
+              <p className='my-6'>
+              The latest digital printing technologies have long gone beyond conventional printing. Today, one of the increasingly popular areas of digital printing is glass printing. Our company is in a hurry to share great news with you!
+              </p>
+              <Link className='text-[#6e6b6b] '>Learn more</Link>
+            </div>
+            <div>
+              <img src={rasm31} alt="" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <hr className='my-12 border-[#4b4949]' />
+    </section>
+  );
+};
+
+export default Home;
