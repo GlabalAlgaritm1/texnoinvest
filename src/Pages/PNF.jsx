@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router'
+import { Elements } from '../Elements'
 
 const PNF = () => {
   return (
-    <section className='text-center pt-64'>
+    <section className={`${Elements.Container} text-center pt-64`}>
         <h2 className='text-4xl font-semibold mb-12'>
             Siz xoxlagan sahifa topilmadi
         </h2>

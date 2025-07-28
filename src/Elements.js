@@ -1,3 +1,3 @@
 export const Elements = {
-    "Container" : 'w-full max-w-6xl mx-auto px-5'
+    "Container" : 'w-full max-w-[1320px] mx-auto px-5'
 }

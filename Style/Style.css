@@ -1,0 +1,12 @@
+.mySwiper {
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #141414;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: #039355 !important; /* Blue-600 */
+}

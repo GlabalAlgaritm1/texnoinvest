@@ -6,7 +6,6 @@ import rasm4 from '../img/img-logo/tort.svg'
 import rasm5 from '../img/img-logo/besh.svg'
 import rasm6 from '../img/img-logo/olti.svg'
 import rasm7 from '../img/img-logo/yetti.svg'
-import rasm8 from '../img/img-logo/sakkiz.svg'
 import rasm9 from '../img/img-logo/toqiz.svg'
 import rasm10 from '../img/img-logo/on.svg'
 import rasm11 from '../img/img-logo/onbir.svg'
@@ -33,6 +32,7 @@ import rasm31 from '../img/img-logo/rasm23.jpg'
 
 
 import { Link } from 'react-router';
+import { Elements } from '../Elements';
 
 
 const Home = () => {
@@ -69,14 +69,14 @@ const Home = () => {
   };
 
   return (
-    <section className="py-10">
+    <section className={`${Elements.Container} py-10`}>
 
       {/* 1 */}
 
-      <div className="flex gap-40 pt-5">
+      <div className="flex flex-col lg:flex-row gap-10 lg:gap-40 pt-5">
         <div className="flex flex-col space-y-3">
-          <h1 className="text-4xl mb-2">«TECHNOINVEST-ST» LLC</h1>
-          <p className="w-full max-w-[500px]">
+          <h1 className="text-5xl mb-2">«TECHNOINVEST-ST» LLC</h1>
+          <p className="w-full text-xl max-w-[680px]">
             A recognized leader in the Uzbekistan market in the production and processing of sheet glass, and the manufacture of windows and facade structures.
           </p>
           <div>
@@ -87,7 +87,7 @@ const Home = () => {
         </div>
         <div className="col-lg-6 text-center">
           <img
-            className="w-72 shadow-2xl shadow-green-500"
+            className="w-80 border-none bg-transparent rounded-full object-contain shadow-2xl shadow-green-500"
             src={rasm1}
             alt="Glass Building"
           />
@@ -100,7 +100,7 @@ const Home = () => {
         <h2 className='text-4xl'>
           Our key indicators
         </h2>
-        <div className="grid grid-cols-4 gap-5 mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-6">
           <div className='flex flex-col border-t-2 border-gray-400 space-y-5 pt-4'>
             <span className='font-semibold text-4xl text-green-500'>19</span>
             <span>years on the market</span>
@@ -122,12 +122,12 @@ const Home = () => {
 
       {/* 3 */}
       <div className="pt-10">
-        <div className="grid grid-cols-16 gap-2">
+        <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-10 lg:grid-cols-8 xl:grid-cols-16 gap-2">
           {years.map((year) => (
             <button
               key={year}
               onClick={() => setSelectedYear(year)}
-              className={`rounded-full px-1 py-4 border border-black/5 ${selectedYear === year ? 'bg-green-500 text-white' : 'bg-transparent'
+              className={`rounded-full px-1 py-6 border border-black/5 ${selectedYear === year ? 'bg-green-500 text-white' : 'bg-transparent'
                 }`}
             >
               {year}
@@ -161,7 +161,7 @@ const Home = () => {
           Production
         </h2>
 
-        <div className="grid grid-cols-3 gap-7">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
           <Link className='flex items-start gap-2'>
             <img src={rasm3} alt="" />
             <p className='text-xl'>
@@ -227,7 +227,7 @@ const Home = () => {
         <h2 className='text-3xl pb-14 pt-16'>
           Why choose us?
         </h2>
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <div className='border border-[#222121]  flex flex-col items-center p-5'>
             <img className='pb-2' src={rasm14} alt="" />
             <p>
@@ -274,19 +274,19 @@ const Home = () => {
         <h2 className='text-3xl pb-14 pt-16'>
           Our work
         </h2>
-        <div className='flex items-center gap-5 pb-8'>
-          <img className='w-[350px] h-[477px]' src={rasm21} alt="" />
-          <img className='w-[350px] h-[477px]' src={rasm22} alt="" />
-          <img className='w-[350px] h-[477px]' src={rasm23} alt="" />
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 pb-8'>
+          <img className='w-full h-[477px]' src={rasm21} alt="" />
+          <img className='w-full h-[477px]' src={rasm22} alt="" />
+          <img className='w-full h-[477px]' src={rasm23} alt="" />
         </div>
         <div className='flex items-center gap-5 pb-8'>
-          <img className='w-[546px] h-[327px]' src={rasm24} alt="" />
-          <img className='w-[546px] h-[327px]' src={rasm25} alt="" />
+          <img className='w-full h-[327px]' src={rasm24} alt="" />
+          <img className='w-full h-[327px]' src={rasm25} alt="" />
         </div>
         <div className='flex items-center gap-5 pb-8'>
-          <img className='w-[350px] h-[477px]' src={rasm26} alt="" />
-          <img className='w-[350px] h-[477px]' src={rasm27} alt="" />
-          <img className='w-[350px] h-[477px]' src={rasm28} alt="" />
+          <img className='w-full h-[477px]' src={rasm26} alt="" />
+          <img className='w-full h-[477px]' src={rasm27} alt="" />
+          <img className='w-full h-[477px]' src={rasm28} alt="" />
         </div>
       </div>
 
@@ -306,7 +306,7 @@ const Home = () => {
             </span>
             <span className='border border-[#4b4949] w-full my-12'></span>
           </div>
-          <div className='flex items-center gap-14'>
+          <div className='flex flex-col lg:flex-row items-center gap-14'>
             <div className='w-full max-w-[750px] px-5 mx-auto  ml-12'>
               <h3 className='text-green-500 text-2xl my-7'>
                 Hot promotion on glass products 10 mm with <br /> tempering
@@ -324,13 +324,13 @@ const Home = () => {
         {/* 2 */}
 
         <div>
-          <div className='flex items-center'>
+          <div className='flex flex-col lg:flex-row items-center gap-14'>
             <span className='text-3xl font-semibold mr-12'>
               02
             </span>
             <span className='border border-[#4b4949] w-full  my-12'></span>
           </div>
-          <div className='flex items-center gap-14'>
+          <div className='flex flex-col lg:flex-row items-center gap-14'>
             <div className='w-full max-w-[750px] px-5 mx-auto  ml-12'>
               <h3 className='text-green-500 text-2xl my-7'>
                 Promotion on double-glazed windows!
@@ -350,13 +350,13 @@ const Home = () => {
         {/* 3 */}
 
         <div>
-          <div className='flex items-center'>
+          <div className='flex flex-col lg:flex-row items-center gap-14'>
             <span className='text-3xl font-semibold mr-12'>
               03
             </span>
-            <span className='border border-[#4b4949] w-full  my-12'></span>
+            <span className='border border-[#4b4949] w-full my-12'></span>
           </div>
-          <div className='flex items-center gap-14'>
+          <div className='flex flex-col lg:flex-row items-center gap-14'>
             <div className='w-full max-w-[750px] px-5 mx-auto  ml-12'>
               <h3 className='text-green-500 text-2xl my-7'>
                 New printer
