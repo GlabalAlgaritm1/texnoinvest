@@ -1,7 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
 nav > a.active {
     @apply text-white
 }

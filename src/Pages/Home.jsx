@@ -75,7 +75,7 @@ const Home = () => {
 
       <div className="flex flex-col lg:flex-row gap-10 md:gap-0 lg:gap-10 pt-5">
         <div className="flex flex-col space-y-3">
-          <h1 className="text-5xl mb-2 md:mb-0 md:text-4xl max-sm:text-4xl">«TECHNOINVEST-ST» LLC</h1>
+          <h1 className="text-5xl mb-2 max-md:mb-0 max-md:text-4xl max-sm:text-4xl">«TECHNOINVEST-ST» LLC</h1>
           <p className="w-full text-xl max-w-[680px]  md:text-base md:max-w-[480px]">
             A recognized leader in the Uzbekistan market in the production and processing of sheet glass, and the manufacture of windows and facade structures.
           </p>
@@ -127,7 +127,7 @@ const Home = () => {
             <button
               key={year}
               onClick={() => setSelectedYear(year)}
-              className={`rounded-full px-1 py-6 max-sm:py-4 border border-black/5 ${selectedYear === year ? 'bg-green-500 text-white' : 'bg-transparent'
+              className={`rounded-full w-20 h-20 border border-black/5 ${selectedYear === year ? 'bg-green-500 text-white' : 'bg-transparent'
                 }`}
             >
               {year}
@@ -270,20 +270,20 @@ const Home = () => {
 
       {/* 7 */}
 
-      <div>
+      <div className=''>
         <h2 className='text-3xl pb-14 pt-16'>
           Our work
         </h2>
-        <div className='grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5 pb-8'>
-          <img className='w-full h-[477px] max-md:w-[216px] max-md:h-[253px] max-sm:w-[83px] max-sm:h-[97px]' src={rasm21} alt="" />
-          <img className='w-full h-[477px] max-md:w-[216px] max-md:h-[253px] max-sm:w-[83px] max-sm:h-[97px]' src={rasm22} alt="" />
-          <img className='w-full h-[477px] max-md:w-[216px] max-md:h-[253px] max-sm:w-[83px] max-sm:h-[97px]' src={rasm23} alt="" />
+        <div className='grid grid-cols-3 gap-5 max-sm:gap-1 max-sm:pb-4 pb-8'>
+          <img className='w-full h-[347px] max-md:w-[216px] max-md:h-[253px] max-sm:w-[83px] max-sm:h-[97px]' src={rasm21} alt="" />
+          <img className='w-full h-[347px] max-md:w-[216px] max-md:h-[253px] max-sm:w-[83px] max-sm:h-[97px]' src={rasm22} alt="" />
+          <img className='w-full h-[347px] max-md:w-[216px] max-md:h-[253px] max-sm:w-[83px] max-sm:h-[97px] ' src={rasm23} alt="" />
         </div>
-        <div className='flex items-center gap-5 pb-8'>
-          <img className='w-full h-[327px] max-md:w-[336px] max-md:h-[201px] max-sm:w-[136px] max-sm:h-[81px]' src={rasm24} alt="" />
-          <img className='w-full h-[327px] max-md:w-[336px] max-md:h-[201px] max-sm:w-[136px] max-sm:h-[81px]' src={rasm25} alt="" />
+        <div className='grid grid-cols-2 gap-5 max-sm:gap-1 max-sm:pb-4 pb-8'>
+          <img className='w-full h-[273px] max-md:w-[336px] max-md:h-[201px] max-sm:w-[136px] max-sm:h-[81px]' src={rasm24} alt="" />
+          <img className='w-full h-[273px] max-md:w-[336px] max-md:h-[201px] max-sm:w-[136px] max-sm:h-[81px]' src={rasm25} alt="" />
         </div>
-        <div className='flex items-center gap-5 pb-8'>
+        <div className='grid grid-cols-3 gap-5 max-sm:gap-1 max-sm:pb-4 pb-8'>
           <img className='w-full h-[477px] max-md:w-[216px] max-md:h-[253px] max-sm:w-[83px] max-sm:h-[97px]' src={rasm26} alt="" />
           <img className='w-full h-[477px] max-md:w-[216px] max-md:h-[253px] max-sm:w-[83px] max-sm:h-[97px]' src={rasm27} alt="" />
           <img className='w-full h-[477px] max-md:w-[216px] max-md:h-[253px] max-sm:w-[83px] max-sm:h-[97px]' src={rasm28} alt="" />
@@ -335,7 +335,7 @@ const Home = () => {
               <h3 className='text-green-500 text-2xl my-7'>
                 Promotion on double-glazed windows!
               </h3>
-              <p className='my-6'>
+              <p className='my-6 text-wrap'>
                 Dear friends! We hasten to please you with amazing news. Do you want to save money when ordering double-glazed windows?
                 IP LLC “TEXNOINVEST-ST” announces the start of a Super Promotion!
               </p>

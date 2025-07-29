@@ -7,12 +7,12 @@ const Footer = () => {
   return (
     <footer className={`${Elements.Container} text-white pt-5 `}>
       {/* Upper Section */}
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-col md:gap-0 justify-between gap-10 border-t border-gray-700 pt-10 pb-8 md:pb-4">
+      <div className="px-6 flex max-lg:flex-col max-sm:flex-col max-md:flex-col max-md:gap-0 justify-between gap-10 border-t border-gray-700 pt-10 pb-8 max-md:pb-4">
         
         {/* Logo Block */}
-        <div className="flex flex-col mt-20 md:mt-0 ">
+        <div className="flex flex-col mt-5 max-md:mt-0 ">
           <Link to="/">
-            <img className="h-20 md:hidden" src={logofooter} alt="Logo" />
+            <img className="h-20 max-md:hidden" src={logofooter} alt="Logo" />
           </Link>
         </div>
 
@@ -59,7 +59,7 @@ const Footer = () => {
 
       {/* Lower Bar */}
       <div className="border-t border-gray-700 mt-4">
-       <div className={`${Elements.Container} py-4 px-6 flex flex-col md:flex-col md:items-start justify-between items-center text-sm`}>
+       <div className={`${Elements.Container} py-4 px-6 flex max-lg:items-start max-lg:flex-col max-sm:flex-col max-md:flex-col max-md:items-start justify-between items-center text-sm`}>
        <p className='text-base'>© 2004 - 2025 «TECHNOINVEST-ST» LLC</p>
        <Link target='_blank' to='https://velvet.uz/' className='text-base hover:text-green-600'>Website development – Velvet Solutions</Link>
        </div>
