@@ -122,7 +122,7 @@ const Get = () => {
                         height="100%"
                         className="border-0 rounded-md w-full h-full"
                         loading="lazy"
-                        allowFullScreen=""
+                        allowFullScreen
                         referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
                 </div>

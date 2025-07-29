@@ -33,9 +33,12 @@ import rasm31 from '../img/img-logo/rasm23.jpg'
 
 import { Link } from 'react-router';
 import { Elements } from '../Elements';
+import { useTranslation } from 'react-i18next';
 
 
 const Home = () => {
+  const { t } = useTranslation();
+
   const years = [
     2004, 2005, 2006, 2007, 2008, 2009, 2010,
     2011, 2012, 2013, 2014, 2015, 2016, 2017,
@@ -75,13 +78,12 @@ const Home = () => {
 
       <div className="flex flex-col lg:flex-row gap-10 md:gap-0 lg:gap-10 pt-5">
         <div className="flex flex-col space-y-3">
-          <h1 className="text-5xl mb-2 max-md:mb-0 max-md:text-4xl max-sm:text-4xl">«TECHNOINVEST-ST» LLC</h1>
-          <p className="w-full text-xl max-w-[680px]  md:text-base md:max-w-[480px]">
-            A recognized leader in the Uzbekistan market in the production and processing of sheet glass, and the manufacture of windows and facade structures.
+          <h1 className="text-5xl mb-2 max-md:mb-0 max-md:text-4xl max-sm:text-4xl">{t('title')}</h1>
+          <p className="w-full text-xl max-w-[680px]  md:text-base md:max-w-[480px]">{t('description')}
           </p>
           <div>
             <button className="bg-green-500 border inline-block border-black my-10 p-3 py-10 rounded-full hover:bg-green-700 hover:transition-all hover:duration-200 md:my-3">
-              Learn more
+              {t('button')}
             </button>
           </div>
         </div>
@@ -98,24 +100,24 @@ const Home = () => {
 
       <div>
         <h2 className='text-4xl max-sm:text-3xl mt-2'>
-          Our key indicators
+          {t('indicators.title')}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-5 mt-6">
           <div className='flex flex-col border-t-2 border-gray-400 space-y-5 pt-4'>
             <span className='font-semibold text-4xl text-green-500'>19</span>
-            <span>years on the market</span>
+            <span>  {t('indicators.years')}</span>
           </div>
           <div className='flex flex-col border-t-2 border-gray-400 space-y-5 pt-4'>
             <span className='font-semibold text-4xl text-green-500'>3000+</span>
-            <span>clients</span>
+            <span>  {t('indicators.clients')}</span>
           </div>
           <div className='flex flex-col border-t-2 border-gray-400 space-y-5 pt-4'>
             <span className='font-semibold text-4xl text-green-500'>200</span>
-            <span>employees</span>
+            <span>{t('indicators.employees')}</span>
           </div>
           <div className='flex flex-col border-t-2 border-gray-400 space-y-5 pt-4'>
             <span className='font-semibold text-4xl text-green-500'>2000</span>
-            <span>completed objects</span>
+            <span>{t('indicators.objects')}</span>
           </div>
         </div>
       </div>
@@ -138,15 +140,16 @@ const Home = () => {
         {/* Tanlangan yil ma'lumoti */}
         <div className="mt-6 p-4 text-center">
           <p className="text-lg w-full max-w-[450px] mx-auto">
-            {yearData[selectedYear]}
+            {t(`history.years.${selectedYear}`)}
           </p>
+
         </div>
       </div>
 
       {/* 4 */}
 
       <div>
-        <h2 className='text-6xl font-semibold text-center pb-2 mt-3 max-sm:hidden'>Our History</h2>
+        <h2 className='text-6xl font-semibold text-center pb-2 mt-3 max-sm:hidden'>{t('history.title')}</h2>
         <div
           className="w-full h-screen bg-cover bg-center"
           style={{ backgroundImage: `url(${rasm2})` }}
@@ -158,64 +161,64 @@ const Home = () => {
 
       <div>
         <h2 className='text-3xl pb-14 pt-16'>
-          Production
+          {t('production.title')}
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-7">
           <Link className='flex items-start gap-2'>
             <img src={rasm3} alt="" />
             <p className='text-xl'>
-              Construction glass
+              {t('production.items.glass')}
             </p>
           </Link>
 
           <Link className='flex items-start gap-2'>
             <img src={rasm6} alt="" />
             <p className='text-xl'>
-              Bent glass
+              {t('production.items.double')}
             </p>
           </Link>
           <Link className='flex items-start gap-2'>
             <img src={rasm10} alt="" />
             <p className='text-xl'>
-              Construction glass
+              {t('production.items.laminated')}
             </p>
           </Link>
           <Link className='flex items-start gap-2'>
             <img src={rasm4} alt="" />
             <p className='text-xl'>
-              Construction glass
+              {t('production.items.bent')}
             </p>
           </Link>
 
           <Link className='flex items-start gap-2'>
             <img src={rasm7} alt="" />
             <p className='text-xl'>
-              Construction glass
+              {t('production.items.plastic')}
             </p>
           </Link>
           <Link className='flex items-start gap-2'>
             <img src={rasm11} alt="" />
             <p className='text-xl'>
-              Construction glass
+              {t('production.items.processing')}
             </p>
           </Link>
           <Link className='flex items-start gap-2'>
             <img src={rasm5} alt="" />
             <p className='text-xl'>
-              Construction glass
+              {t('production.items.furniture')}
             </p>
           </Link>
           <Link className='flex items-start gap-2'>
             <img src={rasm9} alt="" />
             <p className='text-xl'>
-              Construction glass
+              {t('production.items.forging')}
             </p>
           </Link>
           <Link className='flex items-start gap-2'>
             <img src={rasm13} alt="" />
             <p className='text-xl'>
-              Construction glass
+              {t('production.items.stained')}
             </p>
           </Link>
         </div>
@@ -225,43 +228,43 @@ const Home = () => {
 
       <div>
         <h2 className='text-3xl pb-14 pt-16'>
-          Why choose us?
+          {t('choose.title')}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-5">
           <div className='border border-[#222121]  flex flex-col items-center p-5'>
             <img className='pb-2' src={rasm14} alt="" />
-            <p>
-              Grandiose production capabilities
+            <p className='w-full text-center'>
+              {t('choose.points.capabilities')}
             </p>
           </div>
           <div className='border border-[#222121]  flex flex-col items-center p-5'>
             <img className='pb-2' src={rasm15} alt="" />
             <p>
-              Quality at the highest level
+              {t('choose.points.quality')}
             </p>
           </div>
           <div className='border border-[#222121]  flex flex-col items-center p-5'>
             <img className='pb-2' src={rasm16} alt="" />
             <p>
-              Delivery to CIS countries
+              {t('choose.points.delivery')}
             </p>
           </div>
           <div className='border border-[#222121]  flex flex-col items-center p-5'>
             <img className='pb-2' src={rasm17} alt="" />
             <p>
-              First-class specialists
+              {t('choose.points.specialists')}
             </p>
           </div>
           <div className='border border-[#222121]  flex flex-col items-center p-5'>
             <img className='pb-2' src={rasm18} alt="" />
             <p>
-              Extensive work experience
+              {t('choose.points.experience')}
             </p>
           </div>
           <div className='border border-[#222121]  flex flex-col items-center p-5'>
             <img className='pb-2' src={rasm19} alt="" />
             <p>
-              High speed of order fulfillment
+              {t('choose.points.speed')}
             </p>
           </div>
 
@@ -272,7 +275,7 @@ const Home = () => {
 
       <div className=''>
         <h2 className='text-3xl pb-14 pt-16'>
-          Our work
+          {t('work.title')}
         </h2>
         <div className='grid grid-cols-3 gap-5 max-sm:gap-1 max-sm:pb-4 pb-8'>
           <img className='w-full h-[347px] max-md:w-[216px] max-md:h-[253px] max-sm:w-[83px] max-sm:h-[97px]' src={rasm21} alt="" />
@@ -294,7 +297,7 @@ const Home = () => {
 
       <div>
         <h2 className='text-3xl pb-14 pt-16'>
-          Latest news
+          {t('news.title')}
         </h2>
 
         {/* 1 */}
@@ -309,11 +312,11 @@ const Home = () => {
           <div className='flex flex-col lg:flex-row items-center gap-14'>
             <div className='w-full max-w-[750px] px-5 mx-auto  ml-12'>
               <h3 className='text-green-500 text-2xl my-7'>
-                Hot promotion on glass products 10 mm with <br /> tempering
+                {t('news.1.title')}
               </h3>
-              <p className='my-6'>Hurry up to purchase 10 mm tempered glass products at a super price - 145,000 sum/sq.m. The promotion is valid for any volume. Production time - up to 7 <br /> working days. Hurry! The promotion period is limited.
+              <p className='my-6'>{t('news.1.desc')}
               </p>
-              <Link className='text-[#6e6b6b] '>Learn more</Link>
+              <Link className='text-[#6e6b6b] '>{t('news.learnMore')}</Link>
             </div>
             <div>
               <img src={rasm29} alt="" />
@@ -333,13 +336,12 @@ const Home = () => {
           <div className='flex flex-col lg:flex-row items-center gap-14'>
             <div className='w-full max-w-[750px] px-5 mx-auto  ml-12'>
               <h3 className='text-green-500 text-2xl my-7'>
-                Promotion on double-glazed windows!
+              {t('news.2.title')}
               </h3>
               <p className='my-6 text-wrap'>
-                Dear friends! We hasten to please you with amazing news. Do you want to save money when ordering double-glazed windows?
-                IP LLC “TEXNOINVEST-ST” announces the start of a Super Promotion!
+              {t('news.2.desc')}
               </p>
-              <Link className='text-[#6e6b6b] '>Learn more</Link>
+              <Link className='text-[#6e6b6b] '>{t('news.learnMore')}</Link>
             </div>
             <div>
               <img src={rasm30} alt="" />
@@ -359,12 +361,12 @@ const Home = () => {
           <div className='flex flex-col lg:flex-row items-center gap-14'>
             <div className='w-full max-w-[750px] px-5 mx-auto  ml-12'>
               <h3 className='text-green-500 text-2xl my-7'>
-                New printer
+                {t('news.3.title')}
               </h3>
               <p className='my-6'>
-              The latest digital printing technologies have long gone beyond conventional printing. Today, one of the increasingly popular areas of digital printing is glass printing. Our company is in a hurry to share great news with you!
+                {t('news.3.desc')}
               </p>
-              <Link className='text-[#6e6b6b] '>Learn more</Link>
+              <Link className='text-[#6e6b6b] '>{t('news.learnMore')}</Link>
             </div>
             <div>
               <img src={rasm31} alt="" />

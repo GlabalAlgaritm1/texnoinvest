@@ -9,18 +9,17 @@ import rasm7 from '../img/img-logo/yetti.svg'
 import rasm11 from '../img/img-logo/onbir.svg'
 import rasm5 from '../img/img-logo/besh.svg'
 import { Link } from 'react-router'
+import { Elements } from '../Elements'
 
 const Services = () => {
   return (
     <section>
-         {/* 5 */}
-
-      <div>
-        <h2 className='text-3xl py-8'>
+      <div className={`${Elements.Container}`}>
+        <h2 className='text-3xl pb-14 pt-16'>
           Production
         </h2>
 
-        <div className="grid grid-cols-3 gap-7">
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-7">
           <Link className='flex items-start gap-2'>
             <img src={rasm3} alt="" />
             <p className='text-xl'>
@@ -31,55 +30,54 @@ const Services = () => {
           <Link className='flex items-start gap-2'>
             <img src={rasm6} alt="" />
             <p className='text-xl'>
-              Bent glass
+              Double-glazed windows
             </p>
           </Link>
           <Link className='flex items-start gap-2'>
             <img src={rasm10} alt="" />
             <p className='text-xl'>
-              Construction glass
+              Laminated glass
             </p>
           </Link>
           <Link className='flex items-start gap-2'>
             <img src={rasm4} alt="" />
             <p className='text-xl'>
-              Construction glass
+              Bent glass
             </p>
           </Link>
 
           <Link className='flex items-start gap-2'>
             <img src={rasm7} alt="" />
             <p className='text-xl'>
-              Construction glass
+              Plastic windows and aluminum structures
             </p>
           </Link>
           <Link className='flex items-start gap-2'>
             <img src={rasm11} alt="" />
             <p className='text-xl'>
-              Construction glass
+              Glass processing
             </p>
           </Link>
           <Link className='flex items-start gap-2'>
             <img src={rasm5} alt="" />
             <p className='text-xl'>
-              Construction glass
+              Furniture
             </p>
           </Link>
           <Link className='flex items-start gap-2'>
             <img src={rasm9} alt="" />
             <p className='text-xl'>
-              Construction glass
+              Artistic forging
             </p>
           </Link>
           <Link className='flex items-start gap-2'>
             <img src={rasm13} alt="" />
             <p className='text-xl'>
-              Construction glass
+              Stained glass
             </p>
           </Link>
         </div>
       </div>
-      <hr className='mt-10'/>
     </section>
   )
 }

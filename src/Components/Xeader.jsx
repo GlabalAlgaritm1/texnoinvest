@@ -1,11 +1,21 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router';
+import { useTranslation } from 'react-i18next';
 import Logo from '../img/img-logo/Logo-header.svg';
 import { Elements } from '../Elements';
 
 const Xeader = () => {
+  const { t, i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const changeLang = (lang) => {
+    i18n.changeLanguage(lang);
+    localStorage.setItem('i18nextLng', lang); // i18next avtomatik ravishda bundan foydalanadi
+  };
+  
+
+
+  
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
 
@@ -17,7 +27,7 @@ const Xeader = () => {
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between pt-[13px] pb-5 gap-4 md:gap-y-0 lg:gap-0 text-white text-sm">
             <Link to='/' className='flex items-start'>
               <i className="bi bi-pin-map-fill mr-1"></i>
-              <p>г.Ташкент, Бектемирский район, ул.Ахангарнское шоссе</p>
+              <p>{t("contact.address")}</p>
             </Link>
             <Link to='tel:+998712957771' className='flex items-center'>
               <i className="bi bi-telephone-fill mr-1"></i>
@@ -28,9 +38,9 @@ const Xeader = () => {
               <p>info@texnoinvest.uz</p>
             </Link>
             <ul className='flex items-center gap-2'>
-              <li><Link to='/ru'>Русский</Link></li>
+              <li><button onClick={() => changeLang("ru")}>Русский</button></li>
               <span className="text-gray-400">/</span>
-              <li><Link to='/en'>English</Link></li>
+              <li><button onClick={() => changeLang("eng")}>English</button></li>
             </ul>
           </div>
         </section>
@@ -48,37 +58,35 @@ const Xeader = () => {
             />
           </Link>
 
-          {/* Hamburger - only for tablet and mobile */}
+          {/* Hamburger */}
           <button
             onClick={toggleMenu}
-            className={`lg:hidden rounded-lg p-2 text-white transition-all duration-200 ${menuOpen ? 'border-4' : 'border'
-              }`}
+            className={`lg:hidden rounded-lg p-2 text-white transition-all duration-200 ${menuOpen ? 'border-4' : 'border'}`}
             aria-label="Open menu"
           >
             <i className="bi bi-list text-2xl"></i>
           </button>
 
-
           {/* Desktop menu */}
           <nav className="hidden lg:flex items-center gap-8">
-            <NavLink to='/' className='text-lg font-semibold text-gray-400'>Главная</NavLink>
-            <NavLink to='/services' className='text-lg font-semibold text-gray-400'>Услуги</NavLink>
-            <NavLink to='/faq' className='text-lg font-semibold text-gray-400'>Вопросы и ответы</NavLink>
-            <NavLink to='/New' className='text-lg font-semibold text-gray-400'>Новости</NavLink>
-            <NavLink to='/career' className='text-lg font-semibold text-gray-400'>Карьера</NavLink>
-            <NavLink to='/contacts' className='text-lg font-semibold text-gray-400'>Контакты</NavLink>
+            <NavLink to='/' className='text-lg font-semibold text-gray-400'>{t("menu.home")}</NavLink>
+            <NavLink to='/services' className='text-lg font-semibold text-gray-400'>{t("menu.services")}</NavLink>
+            <NavLink to='/faq' className='text-lg font-semibold text-gray-400'>{t("menu.faq")}</NavLink>
+            <NavLink to='/news' className='text-lg font-semibold text-gray-400'>{t("menu.news")}</NavLink>
+            <NavLink to='/career' className='text-lg font-semibold text-gray-400'>{t("menu.career")}</NavLink>
+            <NavLink to='/contacts' className='text-lg font-semibold text-gray-400'>{t("menu.contacts")}</NavLink>
           </nav>
         </div>
 
-        {/* Mobile & tablet menu */}
+        {/* Mobile menu */}
         {menuOpen && (
           <div className="lg:hidden flex flex-col gap-4 px-2 pb-5 animate-slide-down">
-            <NavLink to='/' onClick={closeMenu} className='text-lg font-semibold text-white'>Главная</NavLink>
-            <NavLink to='/services' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>Услуги</NavLink>
-            <NavLink to='/faq' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>Вопросы и ответы</NavLink>
-            <NavLink to='/news' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>Новости</NavLink>
-            <NavLink to='/career' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>Карьера</NavLink>
-            <NavLink to='/contacts' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>Контакты</NavLink>
+            <NavLink to='/' onClick={closeMenu} className='text-lg font-semibold text-white'>{t("menu.home")}</NavLink>
+            <NavLink to='/services' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>{t("menu.services")}</NavLink>
+            <NavLink to='/faq' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>{t("menu.faq")}</NavLink>
+            <NavLink to='/news' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>{t("menu.news")}</NavLink>
+            <NavLink to='/career' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>{t("menu.career")}</NavLink>
+            <NavLink to='/contacts' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>{t("menu.contacts")}</NavLink>
           </div>
         )}
       </div>

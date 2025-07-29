@@ -20,8 +20,8 @@ import Furniture from './Pages/Furniture';
 import Plastic from './Pages/Plastic';
 
 
-
 const App = () => {
+
   const routes = createBrowserRouter(
     createRoutesFromElements(
       <>
@@ -31,6 +31,7 @@ const App = () => {
           <Route path='/Faq' element={<Faq />} />
           <Route path='/New' element={<New />} />
 
+          <Route path='/Production' element={<Production />} />
           <Route path='/Career' element={<Career />} />
           <Route path='/Get' element={<Get />} />
           <Route path='/Laminated' element={<Laminated />} />

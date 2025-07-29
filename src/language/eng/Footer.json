@@ -1,0 +1,27 @@
+{
+    "footer": {
+      "navigation": "Navigation",
+      "production": "Production",
+      "items": {
+        "double_glazed": "Double-glazed windows",
+        "laminated": "Laminated glass",
+        "float": "Float glass",
+        "bent": "Bent glass",
+        "fasade": "Facade glass",
+        "stained": "Stained glass",
+        "forging": "Artistic forging",
+        "furniture": "Glass furniture",
+        "plastic": "Plastic windows"
+      },
+      "dev": "Website developed by Velvet.uz"
+    },
+    "menu": {
+      "home": "Home",
+      "services": "Services",
+      "faq": "FAQ",
+      "news": "News",
+      "career": "Career",
+      "contacts": "Contact"
+    }
+  }
+  
