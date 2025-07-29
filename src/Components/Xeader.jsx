@@ -1,66 +1,89 @@
-import React from 'react'
-import { Link, NavLink } from 'react-router'
-import Logo from '../img/img-logo/Logo-header.svg'
-import { Elements } from '../Elements'
+import React, { useState } from 'react';
+import { NavLink, Link } from 'react-router';
+import Logo from '../img/img-logo/Logo-header.svg';
+import { Elements } from '../Elements';
 
 const Xeader = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <>
-<header className={`${Elements.Container}`}>
-      <section>
-        <div className="flex items-center justify-between pt-[13px] pb-5">
-          <Link to='/' className='flex'>
-            <i className="bi bi-pin-map-fill"></i>
-            <p className='ml-1'>
-              Tashkent city, Bektemir district, Akhangaran highway street
-            </p>
-          </Link>
-          <Link to='tel:+998712957771' className='flex items-center'>
-            <i className="bi bi-telephone-fill"></i>
-            <p className='ml-1'>
-              +998 71 295 77 71
-            </p>
-          </Link>
-          <Link to='mailto:info@texnoinvest.uz' className='flex items-center'>
-            <i className="bi bi-envelope-open"></i>
-            <p className='ml-1'>
-              info@texnoinvest.uz
-            </p>
-          </Link>
-          <ul className='flex items-center font-sans'>
-            <li>
-              <Link to='/ru'>
-                <p>Puccкий</p>
-              </Link>
-            </li>
-            <i className="bi bi-slash ps-2"></i>
-            <li className='ml-1'>
-              <Link to='/en'>
-                <p>English</p>
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </header>
-    <div className={`${Elements.Container} sticky top-0 overflow-hidden z-50 bg-[#181818]`}>
-       <div className="flex items-center justify-between pt-2">
+      {/* Top Contact Info */}
+      <header className={`${Elements.Container}`}>
+        <section>
+          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between pt-[13px] pb-5 gap-4 md:gap-y-0 lg:gap-0 text-white text-sm">
+            <Link to='/' className='flex items-start'>
+              <i className="bi bi-pin-map-fill mr-1"></i>
+              <p>г.Ташкент, Бектемирский район, ул.Ахангарнское шоссе</p>
+            </Link>
+            <Link to='tel:+998712957771' className='flex items-center'>
+              <i className="bi bi-telephone-fill mr-1"></i>
+              <p>+998 71 295 77 71</p>
+            </Link>
+            <Link to='mailto:info@texnoinvest.uz' className='flex items-center'>
+              <i className="bi bi-envelope-open mr-1"></i>
+              <p>info@texnoinvest.uz</p>
+            </Link>
+            <ul className='flex items-center gap-2'>
+              <li><Link to='/ru'>Русский</Link></li>
+              <span className="text-gray-400">/</span>
+              <li><Link to='/en'>English</Link></li>
+            </ul>
+          </div>
+        </section>
+      </header>
+
+      {/* Logo + Nav */}
+      <div className={`${Elements.Container} sticky top-0 z-50 bg-[#181818]`}>
+        <div className="flex items-center justify-between py-3 md:py-0">
+          {/* Logo */}
           <Link to='/'>
-            <img src={Logo} alt="Site Logo" />
+            <img
+              src={Logo}
+              alt="Site Logo"
+              className="w-[148px] h-[34px] lg:w-auto lg:h-auto"
+            />
           </Link>
-          <nav className='flex items-center gap-8'>
-            <NavLink to='/' className='text-lg font-semibold text-gray-400'>Home</NavLink>
-            <NavLink to='/Services' className='text-lg font-semibold text-gray-400'>Services</NavLink>
-            <NavLink to='/Faq' className='text-lg font-semibold text-gray-400'>FAQ</NavLink>
-            <NavLink to='/New' className='text-lg font-semibold text-gray-400'>News</NavLink>
-            <NavLink to='/Career' className='text-lg font-semibold text-gray-400'>Career</NavLink>
-            <NavLink to='/Get' className='text-lg font-semibold text-gray-400'>Get in touch</NavLink>
+
+          {/* Hamburger - only for tablet and mobile */}
+          <button
+            onClick={toggleMenu}
+            className={`lg:hidden rounded-lg p-2 text-white transition-all duration-200 ${menuOpen ? 'border-4' : 'border'
+              }`}
+            aria-label="Open menu"
+          >
+            <i className="bi bi-list text-2xl"></i>
+          </button>
+
+
+          {/* Desktop menu */}
+          <nav className="hidden lg:flex items-center gap-8">
+            <NavLink to='/' className='text-lg font-semibold text-gray-400'>Главная</NavLink>
+            <NavLink to='/services' className='text-lg font-semibold text-gray-400'>Услуги</NavLink>
+            <NavLink to='/faq' className='text-lg font-semibold text-gray-400'>Вопросы и ответы</NavLink>
+            <NavLink to='/news' className='text-lg font-semibold text-gray-400'>Новости</NavLink>
+            <NavLink to='/career' className='text-lg font-semibold text-gray-400'>Карьера</NavLink>
+            <NavLink to='/contacts' className='text-lg font-semibold text-gray-400'>Контакты</NavLink>
           </nav>
         </div>
-       </div>
-    </>
-    
-  )
-}
 
-export default Xeader
+        {/* Mobile & tablet menu */}
+        {menuOpen && (
+          <div className="lg:hidden flex flex-col gap-4 px-2 pb-5 animate-slide-down">
+            <NavLink to='/' onClick={closeMenu} className='text-lg font-semibold text-white'>Главная</NavLink>
+            <NavLink to='/services' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>Услуги</NavLink>
+            <NavLink to='/faq' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>Вопросы и ответы</NavLink>
+            <NavLink to='/news' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>Новости</NavLink>
+            <NavLink to='/career' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>Карьера</NavLink>
+            <NavLink to='/contacts' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>Контакты</NavLink>
+          </div>
+        )}
+      </div>
+    </>
+  );
+};
+
+export default Xeader;

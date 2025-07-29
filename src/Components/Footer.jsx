@@ -5,14 +5,14 @@ import { Elements } from '../Elements'
 
 const Footer = () => {
   return (
-    <footer className="text-white pt-10">
+    <footer className={`${Elements.Container} text-white pt-5 `}>
       {/* Upper Section */}
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-10 border-t border-gray-700 pt-10 pb-8">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-col md:gap-0 justify-between gap-10 border-t border-gray-700 pt-10 pb-8 md:pb-4">
         
         {/* Logo Block */}
-        <div className="flex flex-col mt-20">
+        <div className="flex flex-col mt-20 md:mt-0 ">
           <Link to="/">
-            <img className="h-20" src={logofooter} alt="Logo" />
+            <img className="h-20 md:hidden" src={logofooter} alt="Logo" />
           </Link>
         </div>
 
@@ -59,7 +59,7 @@ const Footer = () => {
 
       {/* Lower Bar */}
       <div className="border-t border-gray-700 mt-4">
-       <div className={`${Elements.Container} py-4 px-6 flex flex-col md:flex-row justify-between items-center text-sm`}>
+       <div className={`${Elements.Container} py-4 px-6 flex flex-col md:flex-col md:items-start justify-between items-center text-sm`}>
        <p className='text-base'>© 2004 - 2025 «TECHNOINVEST-ST» LLC</p>
        <Link target='_blank' to='https://velvet.uz/' className='text-base hover:text-green-600'>Website development – Velvet Solutions</Link>
        </div>

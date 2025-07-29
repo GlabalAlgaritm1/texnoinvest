@@ -69,23 +69,23 @@ const Home = () => {
   };
 
   return (
-    <section className={`${Elements.Container} py-10`}>
+    <section className={`${Elements.Container} py-10 md:py-0`}>
 
       {/* 1 */}
 
-      <div className="flex flex-col lg:flex-row gap-10 lg:gap-40 pt-5">
+      <div className="flex flex-col lg:flex-row gap-10 md:gap-0 lg:gap-10 pt-5">
         <div className="flex flex-col space-y-3">
-          <h1 className="text-5xl mb-2">«TECHNOINVEST-ST» LLC</h1>
-          <p className="w-full text-xl max-w-[680px]">
+          <h1 className="text-5xl mb-2 md:mb-0 md:text-4xl max-sm:text-4xl">«TECHNOINVEST-ST» LLC</h1>
+          <p className="w-full text-xl max-w-[680px]  md:text-base md:max-w-[480px]">
             A recognized leader in the Uzbekistan market in the production and processing of sheet glass, and the manufacture of windows and facade structures.
           </p>
           <div>
-            <button className="bg-green-500 border inline-block border-black my-10 p-3 py-10 rounded-full hover:bg-green-700 hover:transition-all hover:duration-200">
+            <button className="bg-green-500 border inline-block border-black my-10 p-3 py-10 rounded-full hover:bg-green-700 hover:transition-all hover:duration-200 md:my-3">
               Learn more
             </button>
           </div>
         </div>
-        <div className="col-lg-6 text-center">
+        <div className="col-lg-6 text-center md:mx-auto md:col-lg-0">
           <img
             className="w-80 border-none bg-transparent rounded-full object-contain shadow-2xl shadow-green-500"
             src={rasm1}
@@ -97,10 +97,10 @@ const Home = () => {
       {/* 2 */}
 
       <div>
-        <h2 className='text-4xl'>
+        <h2 className='text-4xl max-sm:text-3xl mt-2'>
           Our key indicators
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-5 mt-6">
           <div className='flex flex-col border-t-2 border-gray-400 space-y-5 pt-4'>
             <span className='font-semibold text-4xl text-green-500'>19</span>
             <span>years on the market</span>
@@ -127,7 +127,7 @@ const Home = () => {
             <button
               key={year}
               onClick={() => setSelectedYear(year)}
-              className={`rounded-full px-1 py-6 border border-black/5 ${selectedYear === year ? 'bg-green-500 text-white' : 'bg-transparent'
+              className={`rounded-full px-1 py-6 max-sm:py-4 border border-black/5 ${selectedYear === year ? 'bg-green-500 text-white' : 'bg-transparent'
                 }`}
             >
               {year}
@@ -146,7 +146,7 @@ const Home = () => {
       {/* 4 */}
 
       <div>
-        <h2 className='text-6xl font-semibold text-center pb-2 mt-3'>Our History</h2>
+        <h2 className='text-6xl font-semibold text-center pb-2 mt-3 max-sm:hidden'>Our History</h2>
         <div
           className="w-full h-screen bg-cover bg-center"
           style={{ backgroundImage: `url(${rasm2})` }}
@@ -161,7 +161,7 @@ const Home = () => {
           Production
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-7">
           <Link className='flex items-start gap-2'>
             <img src={rasm3} alt="" />
             <p className='text-xl'>
@@ -227,7 +227,7 @@ const Home = () => {
         <h2 className='text-3xl pb-14 pt-16'>
           Why choose us?
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-5">
           <div className='border border-[#222121]  flex flex-col items-center p-5'>
             <img className='pb-2' src={rasm14} alt="" />
             <p>
@@ -274,19 +274,19 @@ const Home = () => {
         <h2 className='text-3xl pb-14 pt-16'>
           Our work
         </h2>
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 pb-8'>
-          <img className='w-full h-[477px]' src={rasm21} alt="" />
-          <img className='w-full h-[477px]' src={rasm22} alt="" />
-          <img className='w-full h-[477px]' src={rasm23} alt="" />
+        <div className='grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5 pb-8'>
+          <img className='w-full h-[477px] max-md:w-[216px] max-md:h-[253px] max-sm:w-[83px] max-sm:h-[97px]' src={rasm21} alt="" />
+          <img className='w-full h-[477px] max-md:w-[216px] max-md:h-[253px] max-sm:w-[83px] max-sm:h-[97px]' src={rasm22} alt="" />
+          <img className='w-full h-[477px] max-md:w-[216px] max-md:h-[253px] max-sm:w-[83px] max-sm:h-[97px]' src={rasm23} alt="" />
         </div>
         <div className='flex items-center gap-5 pb-8'>
-          <img className='w-full h-[327px]' src={rasm24} alt="" />
-          <img className='w-full h-[327px]' src={rasm25} alt="" />
+          <img className='w-full h-[327px] max-md:w-[336px] max-md:h-[201px] max-sm:w-[136px] max-sm:h-[81px]' src={rasm24} alt="" />
+          <img className='w-full h-[327px] max-md:w-[336px] max-md:h-[201px] max-sm:w-[136px] max-sm:h-[81px]' src={rasm25} alt="" />
         </div>
         <div className='flex items-center gap-5 pb-8'>
-          <img className='w-full h-[477px]' src={rasm26} alt="" />
-          <img className='w-full h-[477px]' src={rasm27} alt="" />
-          <img className='w-full h-[477px]' src={rasm28} alt="" />
+          <img className='w-full h-[477px] max-md:w-[216px] max-md:h-[253px] max-sm:w-[83px] max-sm:h-[97px]' src={rasm26} alt="" />
+          <img className='w-full h-[477px] max-md:w-[216px] max-md:h-[253px] max-sm:w-[83px] max-sm:h-[97px]' src={rasm27} alt="" />
+          <img className='w-full h-[477px] max-md:w-[216px] max-md:h-[253px] max-sm:w-[83px] max-sm:h-[97px]' src={rasm28} alt="" />
         </div>
       </div>
 
@@ -324,7 +324,7 @@ const Home = () => {
         {/* 2 */}
 
         <div>
-          <div className='flex flex-col lg:flex-row items-center gap-14'>
+          <div className='flex items-center'>
             <span className='text-3xl font-semibold mr-12'>
               02
             </span>
@@ -350,7 +350,7 @@ const Home = () => {
         {/* 3 */}
 
         <div>
-          <div className='flex flex-col lg:flex-row items-center gap-14'>
+          <div className='flex items-center'>
             <span className='text-3xl font-semibold mr-12'>
               03
             </span>
@@ -374,7 +374,6 @@ const Home = () => {
 
       </div>
 
-      <hr className='my-12 border-[#4b4949]' />
     </section>
   );
 };
