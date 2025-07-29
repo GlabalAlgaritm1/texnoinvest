@@ -64,7 +64,7 @@ const Xeader = () => {
             <NavLink to='/' className='text-lg font-semibold text-gray-400'>Главная</NavLink>
             <NavLink to='/services' className='text-lg font-semibold text-gray-400'>Услуги</NavLink>
             <NavLink to='/faq' className='text-lg font-semibold text-gray-400'>Вопросы и ответы</NavLink>
-            <NavLink to='/news' className='text-lg font-semibold text-gray-400'>Новости</NavLink>
+            <NavLink to='/New' className='text-lg font-semibold text-gray-400'>Новости</NavLink>
             <NavLink to='/career' className='text-lg font-semibold text-gray-400'>Карьера</NavLink>
             <NavLink to='/contacts' className='text-lg font-semibold text-gray-400'>Контакты</NavLink>
           </nav>
