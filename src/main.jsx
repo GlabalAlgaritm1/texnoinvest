@@ -11,11 +11,19 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import XeaderEng from '../src/language/eng/Xeader.json';
 import FooterEng from '../src/language/eng/Footer.json';
 import HomeEng from '../src/language/eng/Home.json';
+import FaqEng from '../src/language/eng/Faq.json'
+import CareerEng from '../src/language/eng/Career.json'
+import GetEng from '../src/language/eng/Get.json'
+import ProductionEng from '../src/language/eng/Production.json'
 
 // ru page
 import XeaderRu from '../src/language/ru/Xeader.json';
 import FooterRu from '../src/language/ru/Footer.json';
 import HomeRu from '../src/language/ru/Home.json';
+import FaqRu from '../src/language/ru/Faq.json'
+import CareerRu from '../src/language/ru/Career.json'
+import GetRu from '../src/language/ru/Get.json'
+import ProductionRu from '../src/language/ru/Production.json'
 
 // i18next config with language detector
 i18next
@@ -32,14 +40,24 @@ i18next
         translation: {
           ...XeaderEng,
           ...FooterEng,
-          ...HomeEng
+          ...HomeEng,
+          ...FaqEng,
+          ...CareerEng,
+          ...GetEng,
+          ...ProductionEng,
+
         }
       },
       ru: {
         translation: {
           ...XeaderRu,
           ...FooterRu,
-          ...HomeRu
+          ...HomeRu,
+          ...FaqRu,
+          ...CareerRu,
+          ...GetRu,
+          ...ProductionRu,
+          
         }
       }
     }

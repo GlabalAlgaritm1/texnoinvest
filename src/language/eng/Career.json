@@ -1,0 +1,32 @@
+{
+    "career": {
+      "title": "Career with us",
+      "subtitle": "Become part of our large and friendly team of professionals who love what they do!",
+      "formTitle": "Submit a CV",
+      "formSubtitle": "Career at TexnoInvest",
+      "formText": "Our company greatly values specialists in their field and is always looking for new talents.",
+      "name": "Your Name",
+      "email": "Your Email",
+      "phone": "Phone",
+      "jobLabel": "Job Title",
+      "jobPlaceholder": "Select a position",
+      "positions": {
+        "frontend": "Frontend Developer",
+        "backend": "Backend Developer",
+        "fullstack": "Fullstack Developer"
+      },
+      "comments": "Comments",
+      "fileLabel": "CV File",
+      "submit": "Submit",
+      "submitting": "Submit...",
+      "success": "Your information was successfully submitted!",
+      "error": "An error occurred!",
+      "newCV": "📝 <b>New Resume!</b>",
+      "nameLabel": "👤 Name",
+      "emailLabel": "📧 Email",
+      "phoneLabel": "📞 Phone",
+      "jobTitleLabel": "💼 Job Title",
+      "commentLabel": "💬 Comment"
+    }
+  }
+  

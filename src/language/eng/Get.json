@@ -1,0 +1,24 @@
+{
+    "feedback": "Feedback",
+    "feedback_description": "Do you have any questions or suggestions for cooperation? Contact us in any convenient way.",
+    "address": "Address",
+    "email": "E-mail",
+    "phone": "Phone",
+    "working_hours": "Working hours",
+    "working_days": "Monday – Friday",
+    "work_time": "From 9:00 AM to 6:00 PM",
+    "lunch": "Lunch time from 1:00 PM to 2:00 PM",
+    "contact_title": "Get in touch",
+    "contact_subtitle": "Message us now",
+    "contact_text": "Do you have questions or suggestions for cooperation? Write to us and our managers will contact you as soon as possible.",
+    "your_name": "Your Name",
+    "your_email": "Your Email",
+    "your_phone": "Phone",
+    "subject": "Subject of the Appeal",
+    "comment": "Comments",
+    "sending": "Sending...",
+    "submit": "Submit",
+    "success": "Successfully sent to Telegram ✅",
+    "error": "An error occurred ❌"
+  }
+  

@@ -1,0 +1,33 @@
+{
+    "faq": {
+      "title": "Questions and answers",
+      "description": "Here we have collected general answers to the most frequently asked questions by our customers.",
+      "list": [
+        {
+          "question": "01. What does your company do?",
+          "answer": "Today our company is multidisciplinary and provides services in the following areas:\n• Manufacture and installation of double-glazed windows\n• Manufacture and supply of architectural glass\n• Production of flat and curved tempered glass\n• Production of laminated glass (Triplex)\n• Stained glass production\n• Artistic glass processing\n• Artistic metal processing\n• Manufacture of plastic windows and aluminum structures\n• Production of facade systems\n• PVC production\n• Custom furniture production"
+        },
+        {
+          "question": "02. When was your company founded?",
+          "answer": "Our company was founded in 2005 and has been growing ever since."
+        },
+        {
+          "question": "03. Is it possible to export your products to other countries?",
+          "answer": "Yes, we have experience exporting to neighboring countries and Europe."
+        },
+        {
+          "question": "04. What are your competitive advantages?",
+          "answer": "High quality, experienced staff, and modern technologies."
+        },
+        {
+          "question": "05. Who are your clients?",
+          "answer": "We serve both individual and corporate clients across various industries."
+        },
+        {
+          "question": "06. Where is your office located?",
+          "answer": "Our head office is located in Tashkent, Uzbekistan."
+        }
+      ]
+    }
+  }
+  

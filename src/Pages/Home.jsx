@@ -273,7 +273,7 @@ const Home = () => {
 
       {/* 7 */}
 
-      <div className=''>
+      <div>
         <h2 className='text-3xl pb-14 pt-16'>
           {t('work.title')}
         </h2>

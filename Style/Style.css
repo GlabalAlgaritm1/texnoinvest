@@ -8,5 +8,13 @@
   opacity: 1;
 }
 .swiper-pagination-bullet-active {
-  background-color: #039355 !important; /* Blue-600 */
+  background-color: #039355 !important;
+}
+
+/* Optional: small screen slide spacing tweak */
+@media (max-width: 640px) {
+  .mySwiper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

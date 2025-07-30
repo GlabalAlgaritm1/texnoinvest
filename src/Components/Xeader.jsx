@@ -13,9 +13,6 @@ const Xeader = () => {
     localStorage.setItem('i18nextLng', lang); // i18next avtomatik ravishda bundan foydalanadi
   };
   
-
-
-  
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
 
@@ -72,9 +69,9 @@ const Xeader = () => {
             <NavLink to='/' className='text-lg font-semibold text-gray-400'>{t("menu.home")}</NavLink>
             <NavLink to='/services' className='text-lg font-semibold text-gray-400'>{t("menu.services")}</NavLink>
             <NavLink to='/faq' className='text-lg font-semibold text-gray-400'>{t("menu.faq")}</NavLink>
-            <NavLink to='/news' className='text-lg font-semibold text-gray-400'>{t("menu.news")}</NavLink>
+            <NavLink to='/New' className='text-lg font-semibold text-gray-400'>{t("menu.news")}</NavLink>
             <NavLink to='/career' className='text-lg font-semibold text-gray-400'>{t("menu.career")}</NavLink>
-            <NavLink to='/contacts' className='text-lg font-semibold text-gray-400'>{t("menu.contacts")}</NavLink>
+            <NavLink to='/Get' className='text-lg font-semibold text-gray-400'>{t("menu.contacts")}</NavLink>
           </nav>
         </div>
 
@@ -84,9 +81,9 @@ const Xeader = () => {
             <NavLink to='/' onClick={closeMenu} className='text-lg font-semibold text-white'>{t("menu.home")}</NavLink>
             <NavLink to='/services' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>{t("menu.services")}</NavLink>
             <NavLink to='/faq' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>{t("menu.faq")}</NavLink>
-            <NavLink to='/news' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>{t("menu.news")}</NavLink>
+            <NavLink to='/New' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>{t("menu.news")}</NavLink>
             <NavLink to='/career' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>{t("menu.career")}</NavLink>
-            <NavLink to='/contacts' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>{t("menu.contacts")}</NavLink>
+            <NavLink to='/Get' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>{t("menu.contacts")}</NavLink>
           </div>
         )}
       </div>

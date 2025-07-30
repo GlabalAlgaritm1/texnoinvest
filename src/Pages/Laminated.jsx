@@ -179,7 +179,7 @@ const Laminated = () => {
                     }}
                     className="w-full max-w-[1300px] mx-auto"
                 >
-                    {[swiperbir, swiperikki, swiperuch, swipertort, swiperbesh,swiperonbir, swipertort, swiperbesh,swiperonbir].map((img, i) => (
+                    {[swiperbir, swiperikki, swiperuch, swipertort, swiperbesh,swiperonbir, ].map((img, i) => (
                         <SwiperSlide key={i} className="flex justify-center">
                             <img
                                 src={img}

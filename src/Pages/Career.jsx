@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
 import rasm30 from '../img/img-logo/rasmB.jpg'
 import { Elements } from '../Elements'
+import { useTranslation } from 'react-i18next'
 
 // Telegram bot token va chat ID
 const BOT_TOKEN = '7933237192:AAE9a0fJTlv1LraxYKBsVrPTzbXL_LssQio'
 const CHAT_ID = '7764198922'
 
 const Career = () => {
+  const { t } = useTranslation();
+
   const [jobTitle, setJobTitle] = useState('')
   const [fullName, setFullName] = useState('')
   const [email, setEmail] = useState('')
@@ -56,8 +59,8 @@ const Career = () => {
     <section className={`${Elements.Container}text-white px-4 py-10`}>
       <div className="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto gap-10 mb-10">
         <div className="w-full md:max-w-[400px]">
-          <h2 className="text-5xl font-bold mb-4 leading-tight">Career with us</h2>
-          <p className="text-lg">Become part of our large and friendly team of professionals who love what they do!</p>
+          <h2 className="text-5xl font-bold mb-4 leading-tight">{t('career.title')}</h2>
+          <p className="text-lg">{t('career.subtitle')}</p>
         </div>
         <div className="relative w-full max-w-3xl h-auto">
           <div className="absolute -left-5 -bottom-5 w-full h-full bg-green-600 rotate-[5deg] z-0 rounded-sm"></div>
@@ -66,9 +69,9 @@ const Career = () => {
       </div>
 
       <div className="max-w-4xl">
-        <h2 className='text-4xl py-5'>Submit a CV</h2>
-        <h3 className='text-3xl text-green-600 py-2'>Career at TexnoInvest</h3>
-        <p className='py-6'>Our company greatly values specialists in their field and is always looking for new talents.</p>
+        <h2 className='text-4xl py-5'>{t('career.formTitle')}</h2>
+        <h3 className='text-3xl text-green-600 py-2'>{t('career.formText')}</h3>
+        <p className='py-6'>{t('career.subtitle')}</p>
 
         <form onSubmit={handleSubmit} className="w-full max-w-[850px] mx-auto">
           {/* 4 Inputs in grid */}
@@ -79,7 +82,7 @@ const Career = () => {
                 type="text"
                 id="fullName"
                 name="fullName"
-                placeholder="Your Name"
+                placeholder={t('career.name')}
                 required
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
@@ -91,7 +94,7 @@ const Career = () => {
                   ${fullName ? 'top-[-14px] text-sm text-gray-500' : 'top-2 text-base text-gray-300'}
                   peer-focus:top-[-14px] peer-focus:text-sm peer-focus:text-gray-500`}
               >
-                Your Name
+                {t('career.name')}
               </label>
             </div>
 
@@ -101,7 +104,7 @@ const Career = () => {
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Your Email"
+                placeholder={t('career.email')}
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -113,7 +116,7 @@ const Career = () => {
                   ${email ? 'top-[-14px] text-sm text-gray-500' : 'top-2 text-base text-gray-300'}
                   peer-focus:top-[-14px] peer-focus:text-sm peer-focus:text-gray-500`}
               >
-                Your Email
+                {t('career.email')}
               </label>
             </div>
 
@@ -123,7 +126,7 @@ const Career = () => {
                 type="tel"
                 id="phone"
                 name="phone"
-                placeholder="Phone"
+                placeholder={t('career.phone')}
                 required
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
@@ -135,13 +138,13 @@ const Career = () => {
                   ${phone ? 'top-[-14px] text-sm text-gray-500' : 'top-2 text-base text-gray-300'}
                   peer-focus:top-[-14px] peer-focus:text-sm peer-focus:text-gray-500`}
               >
-                Phone
+                {t('career.phone')}
               </label>
             </div>
 
             {/* Job Title */}
             <div className="relative w-full">
-              <label htmlFor="job" className="text-gray-500 block mt-3">Job Title</label>
+              <label htmlFor="job" className="text-gray-500 block mt-3">{t('career.jobLabel')}</label>
               <select
                 id="job"
                 name="job"
@@ -150,7 +153,7 @@ const Career = () => {
                 onChange={(e) => setJobTitle(e.target.value)}
                 className="bg-transparent pb-4 border-b border-b-gray-500 appearance-none focus:border-b-blue-500 focus:outline-none text-white w-full"
               >
-                <option value="" disabled hidden>Lavozimni tanlang</option>
+                <option value="" disabled hidden>{t('career.jobPlaceholder')}</option>
                 <option className="text-white bg-black" value="Frontend Developer">Frontend Developer</option>
                 <option className="text-white bg-black" value="Backend Developer">Backend Developer</option>
                 <option className="text-white bg-black" value="Fullstack Developer">Fullstack Developer</option>
@@ -175,13 +178,13 @@ const Career = () => {
                 ${comments ? 'top-[-14px] text-sm text-gray-500' : 'top-2 text-base text-gray-300'}
                 peer-focus:top-[-14px] peer-focus:text-sm peer-focus:text-gray-500`}
             >
-              Comments
+              {t('career.comments')}
             </label>
           </div>
 
           {/* File Input */}
           <div className="relative w-full mt-10">
-            <label htmlFor="resume" className="text-white text-lg block mb-1">CV File</label>
+            <label htmlFor="resume" className="text-white text-lg block mb-1">{t('career.fileLabel')}</label>
             <input
               className="focus:outline-none border-b border-gray-500 w-full text-white bg-transparent file:text-black file:bg-white file:border-none file:px-6 file:py-1 file:rounded-none file:cursor-pointer"
               type="file"
@@ -200,12 +203,12 @@ const Career = () => {
               {loading ? (
                 <>
                   <i className="bi bi-hourglass-split animate-spin text-lg"></i>
-                  Submit...
+                 {t('career.submit')}
                 </>
               ) : (
                 <>
                   <i className="bi bi-cloud-arrow-down-fill text-lg"></i>
-                  Submit
+                  {t('career.submitting')}
                 </>
               )}
             </button>

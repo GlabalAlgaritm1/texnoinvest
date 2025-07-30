@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import rasm30 from '../img/img-logo/rasmN.jpg'
 import { Elements } from '../Elements'
+import { useTranslation } from 'react-i18next'
 
 const BOT_TOKEN = 'YOUR_BOT_TOKEN' // <-- O'zingizni token bilan almashtiring
 const CHAT_ID = 'YOUR_CHAT_ID'     // <-- O'zingizni chat ID bilan almashtiring
 
 const Get = () => {
+    const { t } = useTranslation()
+
     const [fullName, setFullName] = useState('')
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
@@ -42,14 +45,14 @@ const Get = () => {
                 }),
             })
 
-            alert('Telegramga yuborildi ✅')
+            alert(t('success'))
             setFullName('')
             setEmail('')
             setPhone('')
             setSubject('')
             setComments('')
         } catch (error) {
-            alert('Xatolik yuz berdi ❌')
+            alert(t('error'))
         } finally {
             setLoading(false)
         }
@@ -61,10 +64,10 @@ const Get = () => {
                 {/* Text Block */}
                 <div className="w-full md:max-w-[400px]">
                     <h2 className="text-5xl font-bold mb-4 leading-tight">
-                        Feedback
+                        {t('feedback')}
                     </h2>
                     <p className="text-lg">
-                        Do you have any questions or suggestions for cooperation? Contact us in any convenient way.
+                        {t('feedback_description')}
                     </p>
                 </div>
 
@@ -84,19 +87,19 @@ const Get = () => {
                 {/* Left - Contact Info */}
                 <div className="space-y-3">
                     <div className="border-b border-gray-500 pb-2 flex items-center justify-between">
-                        <strong>Address</strong>
+                        <strong>{t('address')}</strong>
                         <div>
                             <p>Tashkent city, Bektemir district,<br /> Akhangaran highway street</p>
                         </div>
                     </div>
                     <div className="border-b border-gray-500 pb-2 flex items-center justify-between">
-                        <strong>E-mail</strong>
+                        <strong>{t('email')}</strong>
                         <div>
                         <p>info@texnoinvest.uz</p>
                         </div>
                     </div>
                     <div className="border-b border-gray-500 pb-2 flex justify-between">
-                        <strong>Phone</strong>
+                        <strong>{t('phone')}</strong>
                         <div>
                             <p>+998 71 295 77 71</p>
                             <p>+998 71 295 00 08</p>
@@ -104,11 +107,11 @@ const Get = () => {
                         </div>
                     </div>
                     <div className="border-b border-gray-500 pb-2 flex items-center justify-between">
-                        <strong>Working hours</strong>
+                        <strong>{t('working_hours')}</strong>
                         <div>
-                            <p className='text-end'>Monday – Friday</p>
-                            <p className='text-end'>From 9:00 AM to 6:00 PM</p>
-                            <p className='text-end'>Lunch time from 1:00 PM to 2:00 PM</p>
+                            <p className='text-end'>{t('working_days')}</p>
+                            <p className='text-end'>{t('work_time')}</p>
+                            <p className='text-end'>{t('lunch')}</p>
                         </div>
                     </div>
                 </div>
@@ -118,7 +121,7 @@ const Get = () => {
                     <iframe
                         title="location"
                         src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.3445198600314!2d69.3053467752927!3d41.216875907057906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8da9d014f4e5%3A0xbcb9ff94d4ecba24!2sAhangaran%20Road!5e0!3m2!1sen!2s!4v1626182097389!5m2!1sen!2s`}
-                        width="100%"
+                       width="100%"
                         height="100%"
                         className="border-0 rounded-md w-full h-full"
                         loading="lazy"
@@ -128,10 +131,9 @@ const Get = () => {
                 </div>
             </div>
             <div className="max-w-2xl px-4 mr-auto">
-                <h2 className="text-4xl py-5">Get in touch</h2>
-                <h3 className="text-3xl text-green-600 py-2">Message us now</h3>
-                <p className="py-6">Do you have questions or suggestions for cooperation?<br />
-                    Write to us and our managers will contact you as soon as possible.</p>
+                <h2 className="text-4xl py-5">{t('contact_title')}</h2>
+                <h3 className="text-3xl text-green-600 py-2">{t('contact_subtitle')}</h3>
+                <p className="py-6">{t('contact_text')}</p>
 
                 <form onSubmit={handleSubmit} className="w-full max-w-[850px] mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -140,7 +142,7 @@ const Get = () => {
                             <input
                                 type="text"
                                 id="fullName"
-                                placeholder="Your Name"
+                                placeholder={t('your_name')}
                                 value={fullName}
                                 onChange={(e) => setFullName(e.target.value)}
                                 required
@@ -152,7 +154,7 @@ const Get = () => {
                   ${fullName ? 'top-[-14px] text-sm text-gray-500' : 'top-2 text-base text-gray-300'}
                   peer-focus:top-[-14px] peer-focus:text-sm peer-focus:text-gray-500`}
                             >
-                                Your Name
+                                {t('your_name')}
                             </label>
                         </div>
 
@@ -161,7 +163,7 @@ const Get = () => {
                             <input
                                 type="email"
                                 id="email"
-                                placeholder="Your Email"
+                                placeholder={t('your_email')}
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 required
@@ -173,7 +175,7 @@ const Get = () => {
                   ${email ? 'top-[-14px] text-sm text-gray-500' : 'top-2 text-base text-gray-300'}
                   peer-focus:top-[-14px] peer-focus:text-sm peer-focus:text-gray-500`}
                             >
-                                Your Email
+                                {t('your_email')}
                             </label>
                         </div>
 
@@ -182,7 +184,7 @@ const Get = () => {
                             <input
                                 type="tel"
                                 id="phone"
-                                placeholder="Phone"
+                                placeholder={t('your_phone')}
                                 value={phone}
                                 onChange={(e) => setPhone(e.target.value)}
                                 required
@@ -194,7 +196,7 @@ const Get = () => {
                   ${phone ? 'top-[-14px] text-sm text-gray-500' : 'top-2 text-base text-gray-300'}
                   peer-focus:top-[-14px] peer-focus:text-sm peer-focus:text-gray-500`}
                             >
-                                Phone
+                                {t('your_phone')}
                             </label>
                         </div>
 
@@ -203,7 +205,7 @@ const Get = () => {
                             <input
                                 type="text"
                                 id="subject"
-                                placeholder="Subject"
+                                placeholder={t('subject')}
                                 value={subject}
                                 onChange={(e) => setSubject(e.target.value)}
                                 required
@@ -215,7 +217,7 @@ const Get = () => {
                   ${subject ? 'top-[-14px] text-sm text-gray-500' : 'top-2 text-base text-gray-300'}
                   peer-focus:top-[-14px] peer-focus:text-sm peer-focus:text-gray-500`}
                             >
-                                Subject of the Appeal
+                                {t('subject')}
                             </label>
                         </div>
                     </div>
@@ -224,7 +226,7 @@ const Get = () => {
                     <div className="relative w-full mt-10">
                         <textarea
                             id="comments"
-                            placeholder="Comments"
+                            placeholder={t('comment')}
                             value={comments}
                             onChange={(e) => setComments(e.target.value)}
                             rows="4"
@@ -236,7 +238,7 @@ const Get = () => {
                 ${comments ? 'top-[-14px] text-sm text-gray-500' : 'top-2 text-base text-gray-300'}
                 peer-focus:top-[-14px] peer-focus:text-sm peer-focus:text-gray-500`}
                         >
-                            Comments
+                            {t('comment')}
                         </label>
                     </div>
 
@@ -250,12 +252,12 @@ const Get = () => {
                             {loading ? (
                                 <>
                                     <i className="bi bi-hourglass-split animate-spin text-lg"></i>
-                                    Sending...
+                                    {t('sending')}
                                 </>
                             ) : (
                                 <>
                                     <i className="bi bi-send-fill text-lg"></i>
-                                    Submit
+                                    {t('submit')}
                                 </>
                             )}
                         </button>

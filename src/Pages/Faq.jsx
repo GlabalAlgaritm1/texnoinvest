@@ -3,6 +3,7 @@ import rasm30 from '../img/img-logo/rasm30.jpg'
 import openIcon from '../img/img-logo/dawn.png'   // Ochilgan holat uchun rasm (pastga qaragan)
 import closeIcon from '../img/img-logo/up.png'    // Yopilgan holat uchun rasm (tepaga qaragan)
 import { Elements } from '../Elements'
+import { useTranslation } from 'react-i18next'
 
 const faqData = [
     {
@@ -71,51 +72,42 @@ const AccordionItem = ({ question, answer, isOpen, onClick }) => (
 )
 
 const Faq = () => {
-    const [openIndex, setOpenIndex] = useState(null)
-
+    const { t } = useTranslation();
+    const [openIndex, setOpenIndex] = useState(null);
     const toggle = (index) => {
-        setOpenIndex(openIndex === index ? null : index)
-    }
+        setOpenIndex(openIndex === index ? null : index);
+    };
 
     return (
-        <section className={`${Elements.Container}text-white py-10 px-5`}>
-            <div className="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto gap-10 mb-10">
-                {/* Text Block */}
-                <div className="w-full md:max-w-[400px]">
-                    <h2 className="text-5xl font-bold mb-4 leading-tight">
-                        Questions and <br /> answers
-                    </h2>
-                    <p className="text-lg">
-                        Here we have collected general answers to the most frequently asked questions by our customers.
-                    </p>
-                </div>
+        <section className={`${Elements.Container} text-white py-10 px-5`}>
+        <div className="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto gap-10 mb-10">
+            <div className="w-full md:max-w-[400px]">
+                <h2 className="text-5xl font-bold mb-4 leading-tight">
+                    {t('faq.title')}
+                </h2>
+                <p className="text-lg">
+                    {t('faq.description')}
+                </p>
+            </div>
+            <div className="relative w-full max-w-[525px] h-auto">
+                <div className="absolute -left-5 -bottom-5 w-full h-full bg-green-600 rotate-[5deg] z-0 rounded-sm"></div>
+                <img src={rasm30} alt="faq visual" className="relative z-10 w-full h-auto object-cover rounded-sm shadow-lg" />
+            </div>
+        </div>
+        <h2 className='text-3xl font-semibold pb-4'>{t('faq.title')}</h2>
+        <div className="max-w-5xl mx-auto bg-[#1a1a1a] rounded-md">
+            {t('faq.list', { returnObjects: true }).map((item, index) => (
+                <AccordionItem
+                    key={index}
+                    question={item.question}
+                    answer={item.answer}
+                    isOpen={openIndex === index}
+                    onClick={() => toggle(index)}
+                />
+            ))}
+        </div>
+    </section>
 
-                {/* Image Block */}
-                <div className="relative w-full max-w-[525px] h-auto">
-                    <div className="absolute -left-5 -bottom-5 w-full h-full bg-green-600 rotate-[5deg] z-0 rounded-sm"></div>
-                    <img
-                        src={rasm30}
-                        alt="faq visual"
-                        className="relative z-10 w-full h-auto object-cover rounded-sm shadow-lg"
-                    />
-                </div>
-            </div>
-            <h2 className='text-3xl font-semibold pb-4'>
-                Questions and answers
-            </h2>
-            {/* Accordion Block */}
-            <div className="max-w-5xl mx-auto bg-[#1a1a1a] rounded-md">
-                {faqData.map((item, index) => (
-                    <AccordionItem
-                        key={index}
-                        question={item.question}
-                        answer={item.answer}
-                        isOpen={openIndex === index}
-                        onClick={() => toggle(index)}
-                    />
-                ))}
-            </div>
-        </section>
     )
 }
 
