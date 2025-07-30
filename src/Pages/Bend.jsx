@@ -1,224 +1,163 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCoverflow, Pagination } from 'swiper/modules'
-import { useRef, useEffect, useState } from 'react';
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 
-import rasm30 from '../img/img-logo/rasm51.jpg'
+import rasm30 from '../img/img-logo/salom5.jpg'
 import salom1 from '../img/img-logo/salom1.svg'
 import salom2 from '../img/img-logo/salom2.svg'
 import salom3 from '../img/img-logo/salom3.svg'
 import salom4 from '../img/img-logo/salom4.svg'
+import salom7 from '../img/img-logo/salom7.jpeg'
+import salom8 from '../img/img-logo/salom8.jpg'
+import salom9 from '../img/img-logo/salom9.jpg'
+import salom10 from '../img/img-logo/salom10.jpg'
+import swiperbir from '../img/img-logo/swiperbir.jpg'
+import swiperikki from '../img/img-logo/swiperikki.jpg'
+import swiperuch from '../img/img-logo/swiperuch.jpg'
+import swipertort from '../img/img-logo/swipertort.jpg'
+import swiperbesh from '../img/img-logo/swiperbesh.jpg'
 
-import salom7 from '../img/img-logo/rasm52.jpg'
-import salom8 from '../img/img-logo/rasm53.jpg'
-import salom9 from '../img/img-logo/rasm54.png'
-import salom10 from '../img/img-logo/rasm55.jpg'
 import { Elements } from '../Elements'
-
+import { useTranslation } from 'react-i18next'
 import '../../Style/Style.css'
 
-// swiper image
-import swiperbir from '../img/img-logo/swiper16.jpg'
-import swiperikki from '../img/img-logo/swiper17.jpg'
-import swiperuch from '../img/img-logo/swiper18.jpg'
-import swipertort from '../img/img-logo/swiper19.jpg'
-import swiperbesh from '../img/img-logo/swiper20.jpg'
-
 const Bend = () => {
-    const paginationTopRef = useRef(null)
-    const paginationBottomRef = useRef(null)
+  const { t } = useTranslation();
+  const advantages = t("bend.advantages", { returnObjects: true });
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedImage, setSelectedImage] = useState(null);
-    useEffect(() => {
-        if (isModalOpen) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'auto';
-        }
-    }, [isModalOpen]);
+  const [isImageLoading, setIsImageLoading] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
+  useEffect(() => {
+    document.body.style.overflow = isModalOpen ? 'hidden' : 'auto';
+  }, [isModalOpen]);
 
-    
-    return (
-        <section>
-            {/* 1 */}
-            <div className={`${Elements.Container} flex flex-col md:flex-row items-center justify-between mx-auto gap-10 mb-28 px-4`}>
-                {/* Text Block */}
-                <div className="w-full md:max-w-[400px]">
-                    <h2 className="text-5xl font-bold mb-4 leading-tight">
-                    Curved glass
-                    </h2>
-                </div>
+  return (
+    <section>
+      {/* Title Section */}
+      <div className={`${Elements.Container} flex lg:flex-row md:flex-col max-sm:flex-col items-center justify-between mx-auto max-md:gap-5 gap-10 md:mb-0 mb-28 px-4`}>
+        <div className="w-full max-w-[400px] max-md:max-w-[500px] text-center max-md:text-left">
+          <h2 className="text-3xl max-sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight md:mb-1">
+            {t("bend.title")}
+          </h2>
+        </div>
 
-                {/* Image Block */}
-                <div className="relative w-full max-w-[525px] h-[500px]">
-                    <div className="absolute -left-6 top-3 bottom-10 w-full h-full bg-[#039355] shadow-2xl shadow-green-600 rotate-[7deg] z-0 rounded-sm"></div>
-                    <img
-                        src={rasm30}
-                        alt="faq visual"
-                        className="relative z-10 w-full h-auto left-3 top-14 object-cover rounded-sm shadow-2xl shadow-green-600"
-                    />
-                </div>
+        <div className="relative w-full max-w-[525px] h-auto max-md:h-0 sm:bottom-0 sm:mb-[200px] max-sm:bottom-[100px] max-sm:mb-[300px]">
+          <div className="absolute -left-3 md:-left-6 top-3 bottom-10 w-full h-full max-h-[500px] lg:bg-[#039355] lg:shadow-2xl lg:shadow-green-600 max-md:bg-transparent rotate-[7deg] z-0 rounded-sm"></div>
+          <img src={rasm30} alt="faq visual" className="relative z-10 w-full h-auto left-2 md:left-3 max-sm:left-0 top-8 md:top-14 max-sm:top-0 object-cover rounded-sm shadow-2xl shadow-green-600 mb-24" />
+        </div>
+      </div>
+
+      {/* Advantages Section */}
+      <div className="bg-[#039355]">
+        <div className={`${Elements.Container} w-full h-auto pt-4 pb-5 mx-auto px-4`}>
+          <h2 className='ml-4 text-2xl sm:text-3xl text-white font-semibold py-4 '>
+            {t('bend.advantagesTitle')}
+          </h2>
+          <div className='flex lg:flex-row md:flex-col max-sm:flex-col max-sm:gap-y-10 justify-center gap-x-16 md:gap-x-14 md:gap-y-5 md:py-10 px-2 py-4'>
+            {[salom1, salom2, salom3, salom4].map((img, i) => (
+              <div key={i} className='flex items-center gap-2 w-full sm:w-[45%] md:w-auto text-white'>
+                <img src={img} alt={t(`bend.advantages.${i}`)} />
+                <p className='text-base sm:text-lg font-semibold'>{t(`bend.advantages.${i}`)}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Content Section */}
+      <div className={`${Elements.Container} px-4`}>
+        <hr className='mt-14' />
+        {[
+          { title: 'glazingTitle', text: 'glazingText', img: salom7, reverse: false },
+          { title: 'doubleGlazedTitle', text: 'doubleGlazedText', img: salom8, reverse: true },
+          { title: 'equipmentTitle', text: 'equipmentText', img: salom9, reverse: false },
+          { title: 'trustTitle', text: 'trustText', img: salom10, reverse: true },
+        ].map(({ title, text, img, reverse }, i) => (
+          <React.Fragment key={i}>
+            <div className={`flex flex-col lg:flex-row items-center gap-8 py-6`}>
+              <div className={`order-1 ${reverse ? 'lg:order-2' : 'lg:order-1'} w-full lg:w-1/2`}>
+                <h2 className="text-xl md:text-2xl font-semibold text-green-500 py-3 max-md:text-end max-sm:text-end">{t(`bend.${title}`)}</h2>
+                <p className="text-sm sm:text-base max-w-xl max-md:text-end max-sm:text-end">{t(`bend.${text}`)}</p>
+              </div>
+              <img className={`order-2 ${reverse ? 'lg:order-1' : 'lg:order-2'} w-full max-w-[522px] h-auto lg:w-1/2`} src={img} alt="" />
             </div>
-            {/* 2 */}
-            <div className="bg-[#039355]">
-                <div className={`${Elements.Container} w-full h-auto pt-4 pb-5 mx-auto`}>
-                    <h2 className='ml-8 text-4xl pt-4 pb-5'>
-                        Our advantages
-                    </h2>
-                    <div className='flex items-center justify-between px-2 py-4'>
-                        <div className='flex items-center gap-2'>
-                            <img src={salom1} alt="Our advantages" />
-                            <p className='text-lg font-semibold'>Our advantages</p>
-                        </div>
-                        <div className='flex items-center gap-2'>
-                            <img src={salom2} alt="Our advantages" />
-                            <p className='text-lg font-semibold'>Quality assurance</p>
-                        </div>
-                        <div className='flex items-center gap-2'>
-                            <img src={salom3} alt="Our advantages" />
-                            <p className='text-lg font-semibold'>Extensive Experience</p>
-                        </div>
-                        <div className='flex items-center gap-2'>
-                            <img src={salom4} alt="Our advantages" />
-                            <p className='text-lg font-semibold'>Shortest possible time</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* 3 */}
-            <div className={`${Elements.Container}`}>
-                <hr className='mt-14' />
-                <div className='flex items-center justify-between py-4'>
-                    <div>
-                        <img className='w-[522px] h-[293px]' src={salom7} alt="" />
-                    </div>
-                    <div>
-                        <h2 className='text-2xl font-semibold text-green-500 py-3'>Did you know?
-                        </h2>
-                        <p className='w-full max-w-xl'>Float glass also bends! This is possible in glass tempering furnaces. First, the glass is heated to 700 °C in the furnace itself, then at the exit, the hot glass is bent by special molding shafts, which are initially set to the desired bending degree via a computer.</p>
-                    </div>
-                </div>
-                <hr />
-                <div className='flex items-center justify-between'>
-                    <div>
-                        <h2 className='text-2xl font-semibold text-green-500 py-3'>Application of curved glass
-                        </h2>
-                        <p className='w-full max-w-xl'>
-                        Bent glass has many applications in architecture and interior design. To create a unique style, curved glass doors stained glass partitions, or curved double-glazed windows can be made. Bending is also often used to make shower cabins or glass furniture elements.</p>
-                    </div>
-                    <span className='border-l h-[325px]'></span>
-                    <div>
-                        <img className='w-[522px] h-[293px]' src={salom8} alt="" />
-                    </div>
-                </div>
-                <hr />
-                <div className='flex items-center justify-between py-4'>
-                    <div>
-                        <img className='w-[522px] h-[293px]' src={salom9} alt="" />
-                    </div>
-                    <div>
-                        <h2 className='text-2xl font-semibold text-green-500 py-3'>Safety
-                        </h2>
-                        <p className='w-full max-w-xl'>Thanks to tempering, curved glass breaks into safe fragments that do not pose a danger to humans.</p>
-                    </div>
-                </div>
-                <hr />
-                <div className='flex items-center justify-between'>
-                    <div>
-                        <h2 className='text-2xl font-semibold text-green-500 py-3'>Company
-                        </h2>
-                        <p className='w-full max-w-xl'>Offers its services for the production of safety bent glass. Our specialists will independently take measurements of the future structure, make all the calculations, manufacture and install the products.</p>
-                    </div>
-                    <span className='border-l h-[325px]'></span>
-                    <div>
-                        <img className='w-[522px] h-[293px]' src={salom10} alt="" />
-                    </div>
-                </div>
-                <hr />
-            </div>
-            {/* 4 - SWIPER SLIDER */}
-            <div className={`${Elements.Container} my-16 px-4 relative mr-[300px]`}>
-                {/* Yuqori Pagination */}
-                <div ref={paginationTopRef} className="swiper-pagination mt-10 pt-20 flex justify-center" />
+            <hr />
+          </React.Fragment>
+        ))}
+      </div>
 
-                <Swiper
-                    modules={[EffectCoverflow, Pagination]}
-                    slidesPerView={4}
-                    slidesPerGroup={4}
-                    spaceBetween={30}
-                    loop={false}
-                    grabCursor={true}
-                    centeredSlides={false}
-                    effect="coverflow"
-                    coverflowEffect={{
-                        rotate: 50,
-                        stretch: 0,
-                        depth: 100,
-                        modifier: 1,
-                        slideShadows: false,
-                    }}
-                    pagination={{
-                        el: [paginationTopRef.current, paginationBottomRef.current],
-                        clickable: true,
-                    }}
-                    onSwiper={(swiper) => {
-                        swiper.params.pagination.el = [paginationTopRef.current, paginationBottomRef.current];
-                        swiper.pagination.init();
-                        swiper.pagination.render();
-                        swiper.pagination.update();
-                    }}
-                    className="w-full max-w-[1300px] mx-auto"
-                >
-                    {[swiperbir,swiperikki,swiperuch,swipertort,swiperbesh,swiperikki,swiperuch,swiperbesh,swiperbir].map((img, i) => (
-                        <SwiperSlide key={i} className="flex justify-center">
-                            <img
-                                src={img}
-                                alt={`Slide ${i + 1}`}
-                                onClick={() => {
-                                    setSelectedImage(img);
-                                    setIsModalOpen(true);
-                                }}
-                                className="cursor-pointer rounded-md w-[525px] h-[325px] mb-10 object-cover shadow-lg"
-                            />
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-                {isModalOpen && (
-                    <div
-                        className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center"
-                        onClick={() => setIsModalOpen(false)} // tashqariga bosilganda yopiladi
-                    >
-                        <div
-                            className="relative bg-none rounded-lg shadow-xl max-w-none w-auto"
-                            onClick={(e) => e.stopPropagation()} // ichkariga bosilganda to‘xtaydi
-                        >
-                            <button
-                                onClick={() => setIsModalOpen(false)}
-                                className="absolute bottom-2 right-2 text-white text-6xl font-bold z-50"
-                            >
-                                &times;
-                            </button>
-                            <img
-                                src={selectedImage}
-                                alt="Selected"
-                                className="max-w-none w-[547px] h-[512px] border-4 border-white object-contain"
-                            />
-                        </div>
-                    </div>
-                )}
+      {/* Swiper Slider */}
+      <div className={`${Elements.Container} my-16 px-4`}>
+        <Swiper
+          modules={[EffectCoverflow, Pagination]}
+          className="mySwiper"
+          slidesPerView={1}
+          spaceBetween={20}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
+          }}
+          loop={false}
+          grabCursor={true}
+          centeredSlides={false}
+          effect="coverflow"
+          coverflowEffect={{
+            rotate: 30,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false,
+          }}
+          pagination={{ clickable: true }}
+        >
+          {[swiperbir, swiperikki, swiperuch, swipertort, swiperbesh].map((img, i) => (
+            <SwiperSlide key={i} className="flex justify-center">
+              <img
+                src={img}
+                alt={`Slide ${i + 1}`}
+                onClick={() => {
+                  setSelectedImage(img);
+                  setIsModalOpen(true);
+                  setIsImageLoading(true);
+                }}
+                className="cursor-pointer rounded-md w-full max-w-[525px] h-[325px] max-sm:h-auto object-cover shadow-lg"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-                {/* Pastki Pagination */}
-                <div ref={paginationBottomRef} className="swiper-pagination  mb-10 flex justify-center" />
-                
+        {isModalOpen && (
+          <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center" onClick={() => setIsModalOpen(false)}>
+            <div className="relative rounded-lg max-w-[95vw]" onClick={(e) => e.stopPropagation()}>
+              <button onClick={() => setIsModalOpen(false)} className="absolute -bottom-12 right-2 text-white text-6xl font-bold z-50">
+                &times;
+              </button>
+
+              {isImageLoading && (
+                <div className="absolute inset-0 flex items-center justify-center bg-white z-40">
+                  <div className="w-12 h-12 border-4 border-green-600 border-t-transparent rounded-full animate-spin"></div>
+                </div>
+              )}
+
+              <img
+                src={selectedImage}
+                alt="Selected"
+                className="w-full max-w-[90vw] h-auto max-h-[80vh] border-4 border-white object-contain rounded-md relative z-50"
+                onLoad={() => setIsImageLoading(false)}
+              />
             </div>
-
-        </section>
-    )
+          </div>
+        )}
+      </div>
+    </section>
+  )
 }
 
 export default Bend

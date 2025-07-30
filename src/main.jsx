@@ -16,6 +16,13 @@ import CareerEng from '../src/language/eng/Career.json'
 import GetEng from '../src/language/eng/Get.json'
 import ProductionEng from '../src/language/eng/Production.json'
 import LaminatedEng from '../src/language/eng/Laminated.json'
+import FloatEng from '../src/language/eng/Float.json'
+import BendEng from '../src/language/eng/Bend.json'
+import FasadeEng from '../src/language/eng/Fasade.json'
+import ArtisticEng from '../src/language/eng/Artistic.json'
+import ArtisticMEng from '../src/language/eng/ArtisticM.json'
+import FurnitureEng from '../src/language/eng/Furniture.json'
+import PlasticEng from '../src/language/eng/Plastic.json'
 // ru page
 import XeaderRu from '../src/language/ru/Xeader.json';
 import FooterRu from '../src/language/ru/Footer.json';
@@ -25,6 +32,13 @@ import CareerRu from '../src/language/ru/Career.json'
 import GetRu from '../src/language/ru/Get.json'
 import ProductionRu from '../src/language/ru/Production.json'
 import LaminatedRu from '../src/language/ru/Laminated.json'
+import FloatRu from '../src/language/ru/Float.json'
+import BendRu from '../src/language/ru/Bend.json'
+import FasadeRu from '../src/language/ru/Fasade.json'
+import ArtisticRu from '../src/language/ru/Artistic.json'
+import ArtisticMRu from '../src/language/ru/ArtisticM.json'
+import FurnitureRu from '../src/language/ru/Furniture.json'
+import PlasticRu from '../src/language/ru/Plastic.json'
 
 // i18next config with language detector
 i18next
@@ -47,6 +61,14 @@ i18next
           ...GetEng,
           ...ProductionEng,
           ...LaminatedEng,
+          ...FloatEng,
+          ...BendEng,
+          ...FasadeEng,
+          ...ArtisticEng,
+          ...ArtisticMEng,
+          ...FurnitureEng,
+          ...PlasticEng,
+
         }
       },
       ru: {
@@ -59,6 +81,13 @@ i18next
           ...GetRu,
           ...ProductionRu,
           ...LaminatedRu,
+          ...FloatRu,
+          ...BendRu,
+          ...FasadeRu,
+          ...ArtisticRu,
+          ...ArtisticMRu,
+          ...FurnitureRu,
+          ...PlasticRu,
 
         }
       }

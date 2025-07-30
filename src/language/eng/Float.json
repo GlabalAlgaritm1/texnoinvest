@@ -1,0 +1,20 @@
+{
+    "float": {
+        "title": "Flat glass processing",
+        "advantagesTitle": "Our advantages",
+        "advantages": [
+            "Our advantages",
+            "Quality assurance",
+            "Extensive Experience",
+            "Shortest possible time"
+        ],
+        "glazingTitle": "Glass cutting",
+        "glazingText": "The primary technological cycle in the processing of glass and mirrors is cutting. A product of the required size is cut out of a large glass sheet and then sent for a mandatory processing procedure - edge processing.",
+        "doubleGlazedTitle": "Edge processing",
+        "doubleGlazedText": "Mandatory procedure for handling dangerous sharp edges. The procedure takes place in several stages: 1 Grinding – smoothing out all irregularities and giving a matte effect.2 Polishing - processing the edge of glass or mirror with soft fibers. After processing the edge looks transparent and bright.There is also a bevelling operation when a chamfer (bevel) of 5 to 45 mm is removed along the perimeter of the entire glass or mirror, which gives the product a more elegant, finished look. The procedure is optional and is of an artistic nature.",
+        "equipmentTitle": "Glass tempering",
+        "equipmentText": "Tempered glass is a glass that has been subjected to special heat treatment. In a tempering furnace, glass is heated to temperatures of 680-720°C and then cooled sharply. As a result, the impact and bending strength of glass increases significantly. The main quality of tempered glass is its safety. When destroyed, it crumbles into many small smooth fragments that are safe for humans.",
+        "trustTitle": "Glass frosting",
+        "trustText": "Glass decoration technology is based on treating the glass surface with an air jet and abrasive. The resulting matte pattern transmits light well, but the image cannot be seen through it."
+    }
+}
