@@ -15,7 +15,7 @@ import FaqEng from '../src/language/eng/Faq.json'
 import CareerEng from '../src/language/eng/Career.json'
 import GetEng from '../src/language/eng/Get.json'
 import ProductionEng from '../src/language/eng/Production.json'
-
+import LaminatedEng from '../src/language/eng/Laminated.json'
 // ru page
 import XeaderRu from '../src/language/ru/Xeader.json';
 import FooterRu from '../src/language/ru/Footer.json';
@@ -24,6 +24,7 @@ import FaqRu from '../src/language/ru/Faq.json'
 import CareerRu from '../src/language/ru/Career.json'
 import GetRu from '../src/language/ru/Get.json'
 import ProductionRu from '../src/language/ru/Production.json'
+import LaminatedRu from '../src/language/ru/Laminated.json'
 
 // i18next config with language detector
 i18next
@@ -45,7 +46,7 @@ i18next
           ...CareerEng,
           ...GetEng,
           ...ProductionEng,
-
+          ...LaminatedEng,
         }
       },
       ru: {
@@ -57,7 +58,8 @@ i18next
           ...CareerRu,
           ...GetRu,
           ...ProductionRu,
-          
+          ...LaminatedRu,
+
         }
       }
     }

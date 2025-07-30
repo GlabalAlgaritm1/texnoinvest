@@ -1,20 +1,18 @@
-.mySwiper {
-  padding-top: 30px;
-  padding-bottom: 60px;
-}
-
+/* Swiper pagination bullets rangini yashil qilish */
 .swiper-pagination-bullet {
-  background-color: #141414;
+  background-color: #039355 !important;
   opacity: 1;
 }
+
 .swiper-pagination-bullet-active {
-  background-color: #039355 !important;
+  background-color: #02b164 !important;
 }
 
-/* Optional: small screen slide spacing tweak */
-@media (max-width: 640px) {
-  .mySwiper {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+/* style.css ichiga */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
 }
