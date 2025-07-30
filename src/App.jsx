@@ -18,18 +18,26 @@ import Artistic from './Pages/Artistic';
 import ArtisticM from './Pages/ArtisticM';
 import Furniture from './Pages/Furniture';
 import Plastic from './Pages/Plastic';
+import MoreOne from './Pages/MoreOne';
+import MoreThree from './Pages/MoreThree';
+import MoreTwo from './Pages/MoreTwo';
 
 
 const App = () => {
 
   const routes = createBrowserRouter(
-    createRoutesFromElements(
+    createRoutesFromElements( 
       <>
         <Route element={<Mainlayout />}>
           <Route path='/' element={<Home />} />
           <Route path='/Services' element={<Services />} />
           <Route path='/Faq' element={<Faq />} />
           <Route path='/New' element={<New />} />
+
+          <Route path='/New/MoreOne' element={<MoreOne />} />
+          <Route path='/New/MoreTwo' element={<MoreTwo />} />
+          <Route path='/New/MoreThree' element={<MoreThree/>} />
+
 
           <Route path='/Production' element={<Production />} />
           <Route path='/Career' element={<Career />} />

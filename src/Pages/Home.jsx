@@ -161,64 +161,64 @@ const Home = () => {
 
       <div>
         <h2 className='text-3xl pb-14 pt-16'>
-          {t('production.title')}
+          {t('productions.title')}
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-7">
-          <Link className='flex items-start gap-2'>
+          <Link to='/fasade' className='flex items-start gap-2'>
             <img src={rasm3} alt="" />
             <p className='text-xl'>
-              {t('production.items.glass')}
+              {t('productions.items.glass')}
             </p>
           </Link>
 
-          <Link className='flex items-start gap-2'>
+          <Link to='/production' className='flex items-start gap-2'>
             <img src={rasm6} alt="" />
             <p className='text-xl'>
-              {t('production.items.double')}
+              {t('productions.items.double')}
             </p>
           </Link>
-          <Link className='flex items-start gap-2'>
+          <Link to='/laminated' className='flex items-start gap-2'>
             <img src={rasm10} alt="" />
             <p className='text-xl'>
-              {t('production.items.laminated')}
+              {t('productions.items.laminated')}
             </p>
           </Link>
-          <Link className='flex items-start gap-2'>
+          <Link to='/bend' className='flex items-start gap-2'>
             <img src={rasm4} alt="" />
             <p className='text-xl'>
-              {t('production.items.bent')}
+              {t('productions.items.bent')}
             </p>
           </Link>
 
-          <Link className='flex items-start gap-2'>
+          <Link to='/plastic' className='flex items-start gap-2'>
             <img src={rasm7} alt="" />
             <p className='text-xl'>
-              {t('production.items.plastic')}
+              {t('productions.items.plastic')}
             </p>
           </Link>
-          <Link className='flex items-start gap-2'>
+          <Link to='/float' className='flex items-start gap-2'>
             <img src={rasm11} alt="" />
             <p className='text-xl'>
-              {t('production.items.processing')}
+              {t('productions.items.processing')}
             </p>
           </Link>
-          <Link className='flex items-start gap-2'>
+          <Link to='/furniture' className='flex items-start gap-2'>
             <img src={rasm5} alt="" />
             <p className='text-xl'>
-              {t('production.items.furniture')}
+              {t('productions.items.furniture')}
             </p>
           </Link>
-          <Link className='flex items-start gap-2'>
+          <Link to='/artistic' className='flex items-start gap-2'>
             <img src={rasm9} alt="" />
             <p className='text-xl'>
-              {t('production.items.forging')}
+              {t('productions.items.forging')}
             </p>
           </Link>
-          <Link className='flex items-start gap-2'>
+          <Link to='/artisticM' className='flex items-start gap-2'>
             <img src={rasm13} alt="" />
             <p className='text-xl'>
-              {t('production.items.stained')}
+              {t('productions.items.stained')}
             </p>
           </Link>
         </div>

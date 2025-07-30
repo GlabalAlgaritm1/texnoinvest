@@ -23,6 +23,9 @@ import ArtisticEng from '../src/language/eng/Artistic.json'
 import ArtisticMEng from '../src/language/eng/ArtisticM.json'
 import FurnitureEng from '../src/language/eng/Furniture.json'
 import PlasticEng from '../src/language/eng/Plastic.json'
+import MoreOneEng from '../src/language/eng/MoreOne.json'
+import MoreTwoEng from '../src/language/eng/MoreTwo.json'
+import MoreThreeEng from '../src/language/eng/MoreThree.json'
 // ru page
 import XeaderRu from '../src/language/ru/Xeader.json';
 import FooterRu from '../src/language/ru/Footer.json';
@@ -39,6 +42,9 @@ import ArtisticRu from '../src/language/ru/Artistic.json'
 import ArtisticMRu from '../src/language/ru/ArtisticM.json'
 import FurnitureRu from '../src/language/ru/Furniture.json'
 import PlasticRu from '../src/language/ru/Plastic.json'
+import MoreOneRu from '../src/language/ru/MoreOne.json'
+import MoreTwoRu from '../src/language/ru/MoreTwo.json'
+import MoreThreeRu from '../src/language/ru/MoreThree.json'
 
 // i18next config with language detector
 i18next
@@ -68,6 +74,9 @@ i18next
           ...ArtisticMEng,
           ...FurnitureEng,
           ...PlasticEng,
+          ...MoreOneEng,
+          ...MoreTwoEng,
+          ...MoreThreeEng,
 
         }
       },
@@ -88,7 +97,9 @@ i18next
           ...ArtisticMRu,
           ...FurnitureRu,
           ...PlasticRu,
-
+          ...MoreOneRu,
+          ...MoreTwoRu,
+          ...MoreThreeRu,
         }
       }
     }

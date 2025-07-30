@@ -12,7 +12,7 @@ const Xeader = () => {
     i18n.changeLanguage(lang);
     localStorage.setItem('i18nextLng', lang); // i18next avtomatik ravishda bundan foydalanadi
   };
-  
+
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
 
@@ -35,10 +35,25 @@ const Xeader = () => {
               <p>info@texnoinvest.uz</p>
             </Link>
             <ul className='flex items-center gap-2'>
-              <li><button onClick={() => changeLang("ru")}>Русский</button></li>
+              <li>
+                <button
+                  onClick={() => changeLang("ru")}
+                  className={i18n.language === 'ru' ? 'text-white font-semibold' : 'text-gray-400'}
+                >
+                  Русский
+                </button>
+              </li>
               <span className="text-gray-400">/</span>
-              <li><button onClick={() => changeLang("eng")}>English</button></li>
+              <li>
+                <button
+                  onClick={() => changeLang("eng")}
+                  className={i18n.language === 'eng' ? 'text-white font-semibold' : 'text-gray-400'}
+                >
+                  English
+                </button>
+              </li>
             </ul>
+
           </div>
         </section>
       </header>

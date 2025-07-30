@@ -32,7 +32,7 @@ const New = () => {
               <p className='my-5 sm:my-6'>
                 {t('news.1.desc')}
               </p>
-              <Link className='text-[#6e6b6b] '>{t('news.learnMore')}</Link>
+              <Link to='/New/MoreOne' className='text-[#6e6b6b] '>{t('news.learnMore')}</Link>
             </div>
             <div>
               <img src={rasm29} alt="" className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-full" />
@@ -56,7 +56,7 @@ const New = () => {
               <p className='my-5 sm:my-6 text-wrap'>
                 {t('news.2.desc')}
               </p>
-              <Link className='text-[#6e6b6b] '>{t('news.learnMore')}</Link>
+              <Link to='/New/MoreTwo' className='text-[#6e6b6b] '>{t('news.learnMore')}</Link>
             </div>
             <div>
               <img src={rasm30} alt="" className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-full" />
@@ -80,7 +80,7 @@ const New = () => {
               <p className='my-5 sm:my-6'>
                 {t('news.3.desc')}
               </p>
-              <Link className='text-[#6e6b6b] '>{t('news.learnMore')}</Link>
+              <Link to='/New/MoreThree' className='text-[#6e6b6b] '>{t('news.learnMore')}</Link>
             </div>
             <div>
               <img src={rasm31} alt="" className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-full" />
