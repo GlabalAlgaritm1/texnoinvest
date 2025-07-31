@@ -6,7 +6,7 @@ import { Elements } from '../Elements';
 
 const Footer = () => {
   const { t } = useTranslation();
-
+ 
   return (
     <footer className={`${Elements.Container} text-white pb-5 mt-10`}>
       {/* Upper Section */}
@@ -24,10 +24,10 @@ const Footer = () => {
           <h2 className="text-2xl font-medium">{t("footer.navigation")}</h2>
           <hr className="w-8 h-1 bg-green-600 mt-2 mb-3" />
           <nav className="flex flex-col gap-2">
-            <Link to="/" className="text-lg hover:text-green-500">{t("menu.home")}</Link>
-            <Link to="/services" className="text-lg hover:text-green-500">{t("menu.services")}</Link>
+            <Link to="/#home" className="text-lg hover:text-green-500">{t("menu.home")}</Link>
+            <Link to="/#services" className="text-lg hover:text-green-500">{t("menu.services")}</Link>
             <Link to="/faq" className="text-lg hover:text-green-500">{t("menu.faq")}</Link>
-            <Link to="/news" className="text-lg hover:text-green-500">{t("menu.news")}</Link>
+            <Link to="/#news" className="text-lg hover:text-green-500">{t("menu.news")}</Link>
             <Link to="/career" className="text-lg hover:text-green-500">{t("menu.career")}</Link>
             <Link to="/contact" className="text-lg hover:text-green-500">{t("menu.contacts")}</Link>
           </nav>

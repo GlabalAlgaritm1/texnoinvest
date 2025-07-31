@@ -1,8 +1,8 @@
 {
-  "moreOne": {
+  "moreOneD": {
     "title": "Hot promotion on glass products 10 mm with tempering",
     "description": "Hurry up to purchase 10 mm tempered glass products at a super price - 145,000 sum/sq.m. The promotion is valid for any volume. Production time - up to 7 working days. Hurry! The promotion period is limited.",
-    "seeAlsoD": "See also"
+    "seeAlso": "See also"
   },
   "newsD": {
     "learnMore": "Learn more",
@@ -16,3 +16,4 @@
     }
   }
 }
+ 

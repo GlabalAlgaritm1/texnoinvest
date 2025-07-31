@@ -24,7 +24,7 @@ const MoreOne = () => {
           {t('moreOne.description')}
         </p>
         <h2 className='text-2xl my-5'>
-          {t('moreOne.seeAlsoD')}
+          {t('moreOneD.seeAlso')}
         </h2>
 
         {/* 2 */}

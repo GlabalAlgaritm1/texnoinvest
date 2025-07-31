@@ -10,7 +10,7 @@ const Xeader = () => {
 
   const changeLang = (lang) => {
     i18n.changeLanguage(lang);
-    localStorage.setItem('i18nextLng', lang); // i18next avtomatik ravishda bundan foydalanadi
+    localStorage.setItem('i18nextLng', lang);
   };
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -18,43 +18,40 @@ const Xeader = () => {
 
   return (
     <>
-      {/* Top Contact Info */}
+      {/* Top Contact Info - only visible on large screens */}
       <header className={`${Elements.Container}`}>
-        <section>
-          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between pt-[13px] pb-5 gap-4 md:gap-y-0 lg:gap-0 text-white text-sm">
-            <Link to='/' className='flex items-start'>
-              <i className="bi bi-pin-map-fill mr-1"></i>
-              <p>{t("contact.address")}</p>
-            </Link>
-            <Link to='tel:+998712957771' className='flex items-center'>
-              <i className="bi bi-telephone-fill mr-1"></i>
-              <p>+998 71 295 77 71</p>
-            </Link>
-            <Link to='mailto:info@texnoinvest.uz' className='flex items-center'>
-              <i className="bi bi-envelope-open mr-1"></i>
-              <p>info@texnoinvest.uz</p>
-            </Link>
-            <ul className='flex items-center gap-2'>
-              <li>
-                <button
-                  onClick={() => changeLang("ru")}
-                  className={i18n.language === 'ru' ? 'text-white font-semibold' : 'text-gray-400'}
-                >
-                  Русский
-                </button>
-              </li>
-              <span className="text-gray-400">/</span>
-              <li>
-                <button
-                  onClick={() => changeLang("eng")}
-                  className={i18n.language === 'eng' ? 'text-white font-semibold' : 'text-gray-400'}
-                >
-                  English
-                </button>
-              </li>
-            </ul>
-
-          </div>
+        <section className="hidden lg:flex flex-col lg:flex-row items-start lg:items-center justify-between pt-[13px] pb-5 gap-4 text-white text-sm">
+          <Link to='/Get' className='flex items-start'>
+            <i className="bi bi-pin-map-fill mr-1"></i>
+            <p>{t("contact.address")}</p>
+          </Link>
+          <Link to='tel:+998712957771' className='flex items-center'>
+            <i className="bi bi-telephone-fill mr-1"></i>
+            <p>+998 71 295 77 71</p>
+          </Link>
+          <Link to='mailto:info@texnoinvest.uz' className='flex items-center'>
+            <i className="bi bi-envelope-open mr-1"></i>
+            <p>info@texnoinvest.uz</p>
+          </Link>
+          <ul className='flex items-center gap-2'>
+            <li>
+              <button
+                onClick={() => changeLang("ru")}
+                className={i18n.language === 'ru' ? 'text-white font-semibold' : 'text-gray-400'}
+              >
+                Русский
+              </button>
+            </li>
+            <span className="text-gray-400">/</span>
+            <li>
+              <button
+                onClick={() => changeLang("eng")}
+                className={i18n.language === 'eng' ? 'text-white font-semibold' : 'text-gray-400'}
+              >
+                English
+              </button>
+            </li>
+          </ul>
         </section>
       </header>
 
@@ -92,7 +89,43 @@ const Xeader = () => {
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div className="lg:hidden flex flex-col gap-4 px-2 pb-5 animate-slide-down">
+          <div className="lg:hidden flex flex-col h-screen gap-4 px-2 pb-5 animate-slide-down">
+            {/* Mobile Top Info */}
+            <div className="flex flex-col gap-2 text-white text-sm pt-2">
+              <Link to='/Get' onClick={closeMenu} className='flex items-start'>
+                <i className="bi bi-pin-map-fill mr-1"></i>
+                <p>{t("contact.address")}</p>
+              </Link>
+              <Link to='tel:+998712957771' className='flex items-center'>
+                <i className="bi bi-telephone-fill mr-1"></i>
+                <p>+998 71 295 77 71</p>
+              </Link>
+              <Link to='mailto:info@texnoinvest.uz' className='flex items-center'>
+                <i className="bi bi-envelope-open mr-1"></i>
+                <p>info@texnoinvest.uz</p>
+              </Link>
+              <ul className='flex items-center gap-2'>
+                <li>
+                  <button
+                    onClick={() => changeLang("ru")}
+                    className={i18n.language === 'ru' ? 'text-white font-semibold' : 'text-gray-400'}
+                  >
+                    Русский
+                  </button>
+                </li>
+                <span className="text-gray-400">/</span>
+                <li>
+                  <button
+                    onClick={() => changeLang("eng")}
+                    className={i18n.language === 'eng' ? 'text-white font-semibold' : 'text-gray-400'}
+                  >
+                    English
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            {/* Mobile Nav Links */}
             <NavLink to='/' onClick={closeMenu} className='text-lg font-semibold text-white'>{t("menu.home")}</NavLink>
             <NavLink to='/services' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>{t("menu.services")}</NavLink>
             <NavLink to='/faq' onClick={closeMenu} className='text-lg font-semibold text-gray-400'>{t("menu.faq")}</NavLink>

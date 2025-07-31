@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import rasm1 from '../img/img-logo/bir.png';
 import rasm2 from '../img/img-logo/ikki.png'
 import rasm3 from '../img/img-logo/uch.svg'
@@ -31,14 +31,41 @@ import rasm31 from '../img/img-logo/rasm23.jpg'
 
 
 
-import { Link } from 'react-router';
+import { Link, useLocation } from 'react-router';
 import { Elements } from '../Elements';
 import { useTranslation } from 'react-i18next';
 
 
 const Home = () => {
   const { t } = useTranslation();
+  // Scroll
+  const location = useLocation()
 
+  // Servise
+  const servicesRef = useRef(null)
+
+  useEffect(() => {
+    if (location.hash === '#services' && servicesRef.current) {
+      servicesRef.current.scrollIntoView({ behavior: 'smooth' })
+    }
+  }, [location])
+  // News
+  const newsRef = useRef(null)
+
+  useEffect(() => {
+    if (location.hash === '#news' && newsRef.current) {
+      newsRef.current.scrollIntoView({ behavior: 'smooth' })
+    }
+  }, [location])
+// Home
+const homeRef = useRef(null)
+  useEffect(() => {
+    if (location.hash === '#home' && homeRef.current) {
+      homeRef.current.scrollIntoView({ behavior: 'smooth' })
+    }
+  }, [location]);
+
+  // Scroll
   const years = [
     2004, 2005, 2006, 2007, 2008, 2009, 2010,
     2011, 2012, 2013, 2014, 2015, 2016, 2017,
@@ -76,7 +103,7 @@ const Home = () => {
 
       {/* 1 */}
 
-      <div className="flex flex-col lg:flex-row gap-10 md:gap-0 lg:gap-10 pt-5">
+      <div ref={homeRef} id='/' className="flex flex-col lg:flex-row gap-10 md:gap-0 lg:gap-10 pt-5">
         <div className="flex flex-col space-y-3">
           <h1 className="text-5xl mb-2 max-md:mb-0 max-md:text-4xl max-sm:text-4xl">{t('title')}</h1>
           <p className="w-full text-xl max-w-[680px]  md:text-base md:max-w-[480px]">{t('description')}
@@ -159,7 +186,7 @@ const Home = () => {
 
       {/* 5 */}
 
-      <div>
+      <div ref={servicesRef} id="services">
         <h2 className='text-3xl pb-14 pt-16'>
           {t('productions.title')}
         </h2>
@@ -295,83 +322,83 @@ const Home = () => {
 
       {/* 8 */}
 
+      <div ref={newsRef} id="news">
+        <h2 className='text-2xl sm:text-3xl pb-10 sm:pb-14 pt-10 sm:pt-16 text-center sm:text-left'>
+          {t('news.title')}
+        </h2>
+
+        {/* 1 */}
         <div>
-             <h2 className='text-2xl sm:text-3xl pb-10 sm:pb-14 pt-10 sm:pt-16 text-center sm:text-left'>
-               {t('news.title')}
-             </h2>
-     
-             {/* 1 */}
-             <div>
-               <div className='flex items-center'>
-                 <span className='text-xl sm:text-3xl font-semibold mr-6 sm:mr-12'>
-                   01
-                 </span>
-                 <span className='border border-[#4b4949] w-full my-8 sm:my-12'></span>
-               </div>
-               <div className='flex flex-col md:flex-col lg:flex-row items-center gap-10 sm:gap-12 lg:gap-14 px-3'>
-                 <div className='w-full max-w-[750px] md:px-6 px-3 mx-auto md:ml-8 lg:ml-12'>
-                   <h3 className='text-green-500 text-xl sm:text-2xl my-5 sm:my-7'>
-                     {t('news.1.title')}
-                   </h3>
-                   <p className='my-5 sm:my-6'>
-                     {t('news.1.desc')}
-                   </p>
-                   <Link className='text-[#6e6b6b] '>{t('news.learnMore')}</Link>
-                 </div>
-                 <div>
-                   <img src={rasm29} alt="" className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-full" />
-                 </div>
-               </div>
-             </div>
-     
-             {/* 2 */}
-             <div>
-               <div className='flex items-center'>
-                 <span className='text-xl sm:text-3xl font-semibold mr-6 sm:mr-12'>
-                   02
-                 </span>
-                 <span className='border border-[#4b4949] w-full my-8 sm:my-12'></span>
-               </div>
-               <div className='flex flex-col md:flex-col lg:flex-row items-center gap-10 sm:gap-12 lg:gap-14 px-3'>
-                 <div className='w-full max-w-[750px] md:px-6 px-3 mx-auto md:ml-8 lg:ml-12'>
-                   <h3 className='text-green-500 text-xl sm:text-2xl my-5 sm:my-7'>
-                     {t('news.2.title')}
-                   </h3>
-                   <p className='my-5 sm:my-6 text-wrap'>
-                     {t('news.2.desc')}
-                   </p>
-                   <Link className='text-[#6e6b6b] '>{t('news.learnMore')}</Link>
-                 </div>
-                 <div>
-                   <img src={rasm30} alt="" className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-full" />
-                 </div>
-               </div>
-             </div>
-     
-             {/* 3 */}
-             <div>
-               <div className='flex items-center'>
-                 <span className='text-xl sm:text-3xl font-semibold mr-6 sm:mr-12'>
-                   03
-                 </span>
-                 <span className='border border-[#4b4949] w-full my-8 sm:my-12'></span>
-               </div>
-               <div className='flex flex-col md:flex-col lg:flex-row items-center gap-10 sm:gap-12 lg:gap-14 px-3'>
-                 <div className='w-full max-w-[750px] md:px-6 px-3 mx-auto md:ml-8 lg:ml-12'>
-                   <h3 className='text-green-500 text-xl sm:text-2xl my-5 sm:my-7'>
-                     {t('news.3.title')}
-                   </h3>
-                   <p className='my-5 sm:my-6'>
-                     {t('news.3.desc')}
-                   </p>
-                   <Link className='text-[#6e6b6b] '>{t('news.learnMore')}</Link>
-                 </div>
-                 <div>
-                   <img src={rasm31} alt="" className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-full" />
-                 </div>
-               </div>
-             </div>
-           </div>
+          <div className='flex items-center'>
+            <span className='text-xl sm:text-3xl font-semibold mr-6 sm:mr-12'>
+              01
+            </span>
+            <span className='border border-[#4b4949] w-full my-8 sm:my-12'></span>
+          </div>
+          <div className='flex flex-col md:flex-col lg:flex-row items-center gap-10 sm:gap-12 lg:gap-14 px-3'>
+            <div className='w-full max-w-[750px] md:px-6 px-3 mx-auto md:ml-8 lg:ml-12'>
+              <h3 className='text-green-500 text-xl sm:text-2xl my-5 sm:my-7'>
+                {t('news.1.title')}
+              </h3>
+              <p className='my-5 sm:my-6'>
+                {t('news.1.desc')}
+              </p>
+              <Link to='/New/MoreOne' className='text-[#6e6b6b] '>{t('news.learnMore')}</Link>
+            </div>
+            <div>
+              <img src={rasm29} alt="" className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-full" />
+            </div>
+          </div>
+        </div>
+
+        {/* 2 */}
+        <div>
+          <div className='flex items-center'>
+            <span className='text-xl sm:text-3xl font-semibold mr-6 sm:mr-12'>
+              02
+            </span>
+            <span className='border border-[#4b4949] w-full my-8 sm:my-12'></span>
+          </div>
+          <div className='flex flex-col md:flex-col lg:flex-row items-center gap-10 sm:gap-12 lg:gap-14 px-3'>
+            <div className='w-full max-w-[750px] md:px-6 px-3 mx-auto md:ml-8 lg:ml-12'>
+              <h3 className='text-green-500 text-xl sm:text-2xl my-5 sm:my-7'>
+                {t('news.2.title')}
+              </h3>
+              <p className='my-5 sm:my-6 text-wrap'>
+                {t('news.2.desc')}
+              </p>
+              <Link to='/New/MoreTwo' className='text-[#6e6b6b] '>{t('news.learnMore')}</Link>
+            </div>
+            <div>
+              <img src={rasm30} alt="" className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-full" />
+            </div>
+          </div>
+        </div>
+
+        {/* 3 */}
+        <div>
+          <div className='flex items-center'>
+            <span className='text-xl sm:text-3xl font-semibold mr-6 sm:mr-12'>
+              03
+            </span>
+            <span className='border border-[#4b4949] w-full my-8 sm:my-12'></span>
+          </div>
+          <div className='flex flex-col md:flex-col lg:flex-row items-center gap-10 sm:gap-12 lg:gap-14 px-3'>
+            <div className='w-full max-w-[750px] md:px-6 px-3 mx-auto md:ml-8 lg:ml-12'>
+              <h3 className='text-green-500 text-xl sm:text-2xl my-5 sm:my-7'>
+                {t('news.3.title')}
+              </h3>
+              <p className='my-5 sm:my-6'>
+                {t('news.3.desc')}
+              </p>
+              <Link to='/New/MoreThree' className='text-[#6e6b6b] '>{t('news.learnMore')}</Link>
+            </div>
+            <div>
+              <img src={rasm31} alt="" className="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-full" />
+            </div>
+          </div>
+        </div>
+      </div>
 
     </section>
   );
