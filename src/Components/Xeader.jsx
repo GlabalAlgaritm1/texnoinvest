@@ -57,7 +57,7 @@ const Xeader = () => {
 
       {/* Logo + Nav */}
       <div className={`${Elements.Container} sticky top-0 z-50 bg-[#181818]`}>
-        <div className="flex items-center justify-between py-3 md:py-0">
+        <div className="flex items-center justify-between py-3 md:py-2 sm:py-4 md:border-b md:border-b-white md:rounded-b-lg">
           {/* Logo */}
           <Link to='/'>
             <img
@@ -89,7 +89,7 @@ const Xeader = () => {
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div className="lg:hidden flex flex-col border-b border-b-white rounded-b-lg h-screen gap-4 px-2 py-5 pb-5 animate-slide-down">
+          <div className="lg:hidden flex flex-col h-screen gap-4 px-2 py-5 pb-5 animate-slide-down">
             {/* Mobile Top Info */}
             <div className="flex flex-col gap-2 text-white text-sm pt-2">
               <Link to='/Get' onClick={closeMenu} className='flex items-start'>
