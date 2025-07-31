@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { NavLink, Link } from 'react-router';
+import React, { useState, useEffect } from 'react';
+import { NavLink, Link, useLocation } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import Logo from '../img/img-logo/Logo-header.svg';
 import { Elements } from '../Elements';
@@ -7,6 +7,12 @@ import { Elements } from '../Elements';
 const Xeader = () => {
   const { t, i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  // Har safar sahifa o'zgarsa (yangi route), menyuni yopamiz
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location]);
 
   const changeLang = (lang) => {
     i18n.changeLanguage(lang);
@@ -19,7 +25,8 @@ const Xeader = () => {
   return (
     <>
       {/* Top Contact Info - only visible on large screens */}
-      <header className={`${Elements.Container}`}>
+    <div className="">
+    <header className={`${Elements.Container}`}>
         <section className="hidden lg:flex flex-col lg:flex-row items-start lg:items-center justify-between pt-[13px] pb-5 gap-4 text-white text-sm">
           <Link to='/Get' className='flex items-start'>
             <i className="bi bi-pin-map-fill mr-1"></i>
@@ -54,7 +61,7 @@ const Xeader = () => {
           </ul>
         </section>
       </header>
-
+    </div>
       {/* Logo + Nav */}
       <div className={`${Elements.Container} sticky top-0 z-50 bg-[#181818]`}>
         <div className="flex items-center justify-between py-3 md:py-2 sm:py-4 max-md:border-b max-md:border-b-white max-md:rounded-b-lg">
@@ -92,7 +99,7 @@ const Xeader = () => {
           <div className="lg:hidden flex flex-col h-screen gap-4 px-2 py-5 pb-5 animate-slide-down">
             {/* Mobile Top Info */}
             <div className="flex flex-col gap-2 text-white text-sm pt-2">
-              <Link to='/Get' onClick={closeMenu} className='flex items-start'>
+              <Link to='/Get' className='flex items-start' onClick={closeMenu}>
                 <i className="bi bi-pin-map-fill mr-1"></i>
                 <p>{t("contact.address")}</p>
               </Link>

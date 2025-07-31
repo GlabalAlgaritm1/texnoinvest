@@ -4,7 +4,7 @@ import { EffectCoverflow, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
-
+ 
 import rasm30 from '../img/img-logo/salom5.jpg'
 import salom1 from '../img/img-logo/salom1.svg'
 import salom2 from '../img/img-logo/salom2.svg'
@@ -39,15 +39,15 @@ const Production = () => {
   return (
     <section>
       {/* Title Section */}
-      <div className={`${Elements.Container} flex lg:flex-row md:flex-col max-sm:flex-col items-center justify-between mx-auto max-md:gap-5 gap-10 md:mb-0 mb-28 px-4`}>
+      <div className={`${Elements.Container} flex lg:flex-row md:flex-col max-md:flex-col max-sm:flex-col items-center justify-between mx-auto max-md:gap-5 gap-10 md:mb-0 mb-28 px-4`}>
         <div className="w-full max-w-[400px] max-md:max-w-[500px] text-center max-md:text-left">
-          <h2 className="text-3xl max-sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight md:mb-1">
+          <h2 className="text-3xl max-sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight max-sm:my-10 md:mb-1">
             {t("production.title")}
           </h2>
-          <p className='text-sm sm:text-base md:w-full max-sm:mb-52'>{t("production.description")}</p>
+          <p className='text-sm sm:text-base md:w-full md:mb-60 max-sm:mb-32'>{t("production.description")}</p>
         </div>
 
-        <div className="relative w-full max-w-[525px] h-auto max-md:h-0 sm:bottom-0 sm:mb-[200px] max-sm:bottom-[100px] max-sm:mb-[300px]">
+        <div className="relative w-full max-w-[525px] h-auto max-md:h-0 sm:bottom-0 sm:mb-[200px] max-sm:bottom-[100px]  max-sm:mb-[290px]">
           <div className="absolute -left-3 md:-left-6 top-3 bottom-10 w-full h-full max-h-[500px] lg:bg-[#039355] lg:shadow-2xl lg:shadow-green-600 max-md:bg-transparent rotate-[7deg] z-0 rounded-sm"></div>
           <img src={rasm30} alt="faq visual" className="relative z-10 w-full h-auto left-2 md:left-3 max-sm:left-0 top-8 md:top-14 max-sm:top-0 object-cover rounded-sm shadow-2xl shadow-green-600 mb-24" />
         </div>
@@ -74,10 +74,10 @@ const Production = () => {
       <div className={`${Elements.Container} px-4`}>
         <hr className='mt-14' />
         {[
-          { title: 'glazingTitle', text: 'glazingText', img: salom7, reverse: false },
-          { title: 'doubleGlazedTitle', text: 'doubleGlazedText', img: salom8, reverse: true },
-          { title: 'equipmentTitle', text: 'equipmentText', img: salom9, reverse: false },
-          { title: 'trustTitle', text: 'trustText', img: salom10, reverse: true },
+          { title: 'glazingTitle', text: 'glazingText', img: salom7, reverse: true },
+          { title: 'doubleGlazedTitle', text: 'doubleGlazedText', img: salom8, reverse: false },
+          { title: 'equipmentTitle', text: 'equipmentText', img: salom9, reverse: true },
+          { title: 'trustTitle', text: 'trustText', img: salom10, reverse: false },
         ].map(({ title, text, img, reverse }, i) => (
           <React.Fragment key={i}>
             <div className={`flex flex-col lg:flex-row items-center gap-8 py-6`}>

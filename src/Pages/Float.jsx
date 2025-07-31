@@ -5,20 +5,20 @@ import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 
-import rasm30 from '../img/img-logo/salom5.jpg'
+import rasm30 from '../img/img-logo/qale1.jpg'
 import salom1 from '../img/img-logo/salom1.svg'
 import salom2 from '../img/img-logo/salom2.svg'
 import salom3 from '../img/img-logo/salom3.svg'
 import salom4 from '../img/img-logo/salom4.svg'
-import salom7 from '../img/img-logo/salom7.jpeg'
-import salom8 from '../img/img-logo/salom8.jpg'
-import salom9 from '../img/img-logo/salom9.jpg'
-import salom10 from '../img/img-logo/salom10.jpg'
-import swiperbir from '../img/img-logo/swiperbir.jpg'
-import swiperikki from '../img/img-logo/swiperikki.jpg'
-import swiperuch from '../img/img-logo/swiperuch.jpg'
-import swipertort from '../img/img-logo/swipertort.jpg'
-import swiperbesh from '../img/img-logo/swiperbesh.jpg'
+import salom7 from '../img/img-logo/rasm55.jpg'
+import salom8 from '../img/img-logo/rasm56.png'
+import salom9 from '../img/img-logo/rasm54.png'
+import salom10 from '../img/img-logo/rasm53.jpg'
+import swiperbir from '../img/img-logo/swiper12.jpg'
+import swiperikki from '../img/img-logo/swiper13.jpg'
+import swiperuch from '../img/img-logo/swiper15.jpg'
+import swipertort from '../img/img-logo/swiper16.jpg'
+import swiperbesh from '../img/img-logo/swiper18.jpg'
 
 import { Elements } from '../Elements'
 import { useTranslation } from 'react-i18next'
@@ -41,7 +41,7 @@ const Float = () => {
       {/* Title Section */}
       <div className={`${Elements.Container} flex lg:flex-row md:flex-col max-sm:flex-col items-center justify-between mx-auto max-md:gap-5 gap-10 md:mb-0 mb-28 px-4`}>
         <div className="w-full max-w-[400px] max-md:max-w-[500px] text-center max-md:text-left">
-          <h2 className="text-3xl max-sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight md:mb-1">
+          <h2 className="text-3xl max-sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight md:mb-60">
             {t("float.title")}
           </h2>
         </div>
@@ -73,10 +73,10 @@ const Float = () => {
       <div className={`${Elements.Container} px-4`}>
         <hr className='mt-14' />
         {[
-          { title: 'glazingTitle', text: 'glazingText', img: salom7, reverse: false },
-          { title: 'doubleGlazedTitle', text: 'doubleGlazedText', img: salom8, reverse: true },
-          { title: 'equipmentTitle', text: 'equipmentText', img: salom9, reverse: false },
-          { title: 'trustTitle', text: 'trustText', img: salom10, reverse: true },
+          { title: 'glazingTitle', text: 'glazingText', img: salom7, reverse: true },
+          { title: 'doubleGlazedTitle', text: 'doubleGlazedText', img: salom8, reverse: false },
+          { title: 'equipmentTitle', text: 'equipmentText', img: salom9, reverse: true },
+          { title: 'trustTitle', text: 'trustText', img: salom10, reverse: false },
         ].map(({ title, text, img, reverse }, i) => (
           <React.Fragment key={i}>
             <div className={`flex flex-col lg:flex-row items-center gap-8 py-6`}>
