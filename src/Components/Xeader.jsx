@@ -57,7 +57,7 @@ const Xeader = () => {
 
       {/* Logo + Nav */}
       <div className={`${Elements.Container} sticky top-0 z-50 bg-[#181818]`}>
-        <div className="flex items-center justify-between py-3 md:py-2 sm:py-4 md:border-b md:border-b-white md:rounded-b-lg">
+        <div className="flex items-center justify-between py-3 md:py-2 sm:py-4 max-md:border-b max-md:border-b-white max-md:rounded-b-lg">
           {/* Logo */}
           <Link to='/'>
             <img
