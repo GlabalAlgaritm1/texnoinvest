@@ -34,9 +34,12 @@ import rasm31 from '../img/img-logo/rasm23.jpg'
 import { Link, useLocation } from 'react-router';
 import { Elements } from '../Elements';
 import { useTranslation } from 'react-i18next';
+import CountUp from 'react-countup';
+import Usetitle from '../Components/Usetitle';
 
 
 const Home = () => {
+  Usetitle("homeb");
   const { t } = useTranslation();
   // Scroll
   const location = useLocation()
@@ -57,8 +60,8 @@ const Home = () => {
       newsRef.current.scrollIntoView({ behavior: 'smooth' })
     }
   }, [location])
-// Home
-const homeRef = useRef(null)
+  // Home
+  const homeRef = useRef(null)
   useEffect(() => {
     if (location.hash === '#home' && homeRef.current) {
       homeRef.current.scrollIntoView({ behavior: 'smooth' })
@@ -125,29 +128,36 @@ const homeRef = useRef(null)
 
       {/* 2 */}
 
-      <div>
-        <h2 className='text-4xl max-sm:text-3xl mt-2'>
-          {t('indicators.title')}
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-5 mt-6">
-          <div className='flex flex-col border-t-2 border-gray-400 space-y-5 pt-4'>
-            <span className='font-semibold text-4xl text-green-500'>19</span>
-            <span>  {t('indicators.years')}</span>
-          </div>
-          <div className='flex flex-col border-t-2 border-gray-400 space-y-5 pt-4'>
-            <span className='font-semibold text-4xl text-green-500'>3000+</span>
-            <span>  {t('indicators.clients')}</span>
-          </div>
-          <div className='flex flex-col border-t-2 border-gray-400 space-y-5 pt-4'>
-            <span className='font-semibold text-4xl text-green-500'>200</span>
-            <span>{t('indicators.employees')}</span>
-          </div>
-          <div className='flex flex-col border-t-2 border-gray-400 space-y-5 pt-4'>
-            <span className='font-semibold text-4xl text-green-500'>2000</span>
-            <span>{t('indicators.objects')}</span>
-          </div>
-        </div>
-      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-5 mt-6">
+  <div className='flex flex-col border-t-2 border-gray-400 space-y-5 pt-4'>
+    <span className='font-semibold text-4xl text-green-500'>
+      <CountUp end={19} duration={2} />
+    </span>
+    <span>{t('indicators.years')}</span>
+  </div>
+
+  <div className='flex flex-col border-t-2 border-gray-400 space-y-5 pt-4'>
+    <span className='font-semibold text-4xl text-green-500'>
+      <CountUp end={3000} duration={2.5} suffix="+" />
+    </span>
+    <span>{t('indicators.clients')}</span>
+  </div>
+
+  <div className='flex flex-col border-t-2 border-gray-400 space-y-5 pt-4'>
+    <span className='font-semibold text-4xl text-green-500'>
+      <CountUp end={200} duration={2} />
+    </span>
+    <span>{t('indicators.employees')}</span>
+  </div>
+
+  <div className='flex flex-col border-t-2 border-gray-400 space-y-5 pt-4'>
+    <span className='font-semibold text-4xl text-green-500'>
+      <CountUp end={2000} duration={2.5} />
+    </span>
+    <span>{t('indicators.objects')}</span>
+  </div>
+</div>
+
 
       {/* 3 */}
       <div className="pt-10">

@@ -25,8 +25,10 @@ import swiperolti from '../img/img-logo/swiper21.jpg'
 import { Elements } from '../Elements'
 import { useTranslation } from 'react-i18next'
 import '../../Style/Style.css'
+import useTitle from '../Components/Usetitle'
  
 const Bend = () => {
+  useTitle("bendb")
   const { t } = useTranslation();
   const advantages = t("bend.advantages", { returnObjects: true });
 

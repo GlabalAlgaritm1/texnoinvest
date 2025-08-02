@@ -4,6 +4,7 @@ import openIcon from '../img/img-logo/dawn.png'   // Ochilgan holat uchun rasm (
 import closeIcon from '../img/img-logo/up.png'    // Yopilgan holat uchun rasm (tepaga qaragan)
 import { Elements } from '../Elements'
 import { useTranslation } from 'react-i18next'
+import useTitle from '../Components/Usetitle'
 
 const faqData = [
     {
@@ -72,6 +73,7 @@ const AccordionItem = ({ question, answer, isOpen, onClick }) => (
 )
 
 const Faq = () => {
+    useTitle("faqsb")
     const { t } = useTranslation();
     const [openIndex, setOpenIndex] = useState(null);
     const toggle = (index) => {

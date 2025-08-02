@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import rasm30 from '../img/img-logo/rasmB.jpg'
 import { Elements } from '../Elements'
 import { useTranslation } from 'react-i18next'
+import useTitle from '../Components/Usetitle'
 
 // Telegram bot token va chat ID
 const BOT_TOKEN = '7933237192:AAE9a0fJTlv1LraxYKBsVrPTzbXL_LssQio'
@@ -9,7 +10,7 @@ const CHAT_ID = '7764198922'
 
 const Career = () => {
   const { t } = useTranslation();
-
+  useTitle('careerb')
   const [jobTitle, setJobTitle] = useState('')
   const [fullName, setFullName] = useState('')
   const [email, setEmail] = useState('')
@@ -203,7 +204,7 @@ const Career = () => {
               {loading ? (
                 <>
                   <i className="bi bi-hourglass-split animate-spin text-lg"></i>
-                 {t('career.submit')}
+                  {t('career.submit')}
                 </>
               ) : (
                 <>

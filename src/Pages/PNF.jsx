@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { Elements } from '../Elements'
+import useTitle from '../Components/Usetitle'
 
 const PNF = () => {
+  useTitle('pnfb')
   return (
     <section className={`${Elements.Container} text-center pt-64`}>
         <h2 className='text-4xl font-semibold mb-12'>

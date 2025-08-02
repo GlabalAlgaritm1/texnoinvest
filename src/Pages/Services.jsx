@@ -11,8 +11,10 @@ import rasm5 from '../img/img-logo/besh.svg'
 import { Link } from 'react-router'
 import { Elements } from '../Elements'
 import { useTranslation } from 'react-i18next'
+import useTitle from '../Components/Usetitle'
 
 const Services = () => {
+  useTitle('servicesb')
     const { t } = useTranslation();
   
   return (

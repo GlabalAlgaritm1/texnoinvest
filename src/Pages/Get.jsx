@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import rasm30 from '../img/img-logo/rasmN.jpg'
 import { Elements } from '../Elements'
 import { useTranslation } from 'react-i18next'
+import useTitle from '../Components/Usetitle'
 
 const BOT_TOKEN = 'YOUR_BOT_TOKEN' // <-- O'zingizni token bilan almashtiring
 const CHAT_ID = 'YOUR_CHAT_ID'     // <-- O'zingizni chat ID bilan almashtiring
 
 const Get = () => {
     const { t } = useTranslation()
-
+    useTitle('getb')
     const [fullName, setFullName] = useState('')
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
@@ -95,7 +96,7 @@ const Get = () => {
                     <div className="border-b border-gray-500 pb-2 flex items-center justify-between">
                         <strong>{t('email')}</strong>
                         <div>
-                        <p>info@texnoinvest.uz</p>
+                            <p>info@texnoinvest.uz</p>
                         </div>
                     </div>
                     <div className="border-b border-gray-500 pb-2 flex justify-between">
@@ -121,7 +122,7 @@ const Get = () => {
                     <iframe
                         title="location"
                         src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.3445198600314!2d69.3053467752927!3d41.216875907057906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8da9d014f4e5%3A0xbcb9ff94d4ecba24!2sAhangaran%20Road!5e0!3m2!1sen!2s!4v1626182097389!5m2!1sen!2s`}
-                       width="100%"
+                        width="100%"
                         height="100%"
                         className="border-0 rounded-md w-full h-full"
                         loading="lazy"

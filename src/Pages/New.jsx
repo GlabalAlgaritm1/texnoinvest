@@ -5,8 +5,10 @@ import rasm31 from '../img/img-logo/rasm23.jpg'
 import { Link } from 'react-router'
 import { Elements } from '../Elements'
 import { useTranslation } from 'react-i18next'
+import useTitle from '../Components/Usetitle'
 
 const New = () => {
+  useTitle('newb')
   const { t } = useTranslation();
 
   return (

@@ -22,9 +22,11 @@ import swiperbesh from '../img/img-logo/swiperbesh.jpg'
 
 import { Elements } from '../Elements'
 import { useTranslation } from 'react-i18next'
+import useTitle from '../Components/Usetitle'
 import '../../Style/Style.css'
 
 const Artistic = () => {
+  useTitle("artistica")
   const { t } = useTranslation();
   const advantages = t("artistic.advantages", { returnObjects: true });
 

@@ -24,8 +24,10 @@ import swiperbesh from '../img/img-logo/swiperon.jpg'
 import { Elements } from '../Elements'
 import { useTranslation } from 'react-i18next' 
 import '../../Style/Style.css'
+import useTitle from '../Components/Usetitle'
 
 const Laminated = () => {
+  useTitle("laminatedb")
   const { t } = useTranslation();
   const advantages = t("laminated.advantages", { returnObjects: true });
 

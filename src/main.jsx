@@ -26,6 +26,8 @@ import PlasticEng from '../src/language/eng/Plastic.json'
 import MoreOneEng from '../src/language/eng/MoreOne.json'
 import MoreTwoEng from '../src/language/eng/MoreTwo.json'
 import MoreThreeEng from '../src/language/eng/MoreThree.json'
+// title
+import TitleEng from '../src/language/eng/Page.json'
 // ru page
 import XeaderRu from '../src/language/ru/Xeader.json';
 import FooterRu from '../src/language/ru/Footer.json';
@@ -45,6 +47,8 @@ import PlasticRu from '../src/language/ru/Plastic.json'
 import MoreOneRu from '../src/language/ru/MoreOne.json'
 import MoreTwoRu from '../src/language/ru/MoreTwo.json'
 import MoreThreeRu from '../src/language/ru/MoreThree.json'
+// title
+import TitleRu from '../src/language/ru/Page.json'
 
 // i18next config with language detector
 i18next
@@ -77,6 +81,7 @@ i18next
           ...MoreOneEng,
           ...MoreTwoEng,
           ...MoreThreeEng,
+          ...TitleEng,
 
         }
       },
@@ -100,6 +105,7 @@ i18next
           ...MoreOneRu,
           ...MoreTwoRu,
           ...MoreThreeRu,
+          ...TitleRu,
         }
       }
     }

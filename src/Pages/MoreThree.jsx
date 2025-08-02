@@ -6,10 +6,11 @@ import rasm30 from '../img/img-logo/rasm21.jpg'
 import rasm31 from '../img/img-logo/rasm23.jpg'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router'
+import useTitle from '../Components/Usetitle'
 
 const MoreThree = () => {
   const { t } = useTranslation()
-
+useTitle('morethreeb')
   return (
     <section className={`${Elements.Container}`}>
       <h2 className='text-4xl font-sans py-3'>

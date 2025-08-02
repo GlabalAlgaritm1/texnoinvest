@@ -23,8 +23,10 @@ import swiperbesh from '../img/img-logo/swiper18.jpg'
 import { Elements } from '../Elements'
 import { useTranslation } from 'react-i18next'
 import '../../Style/Style.css'
+import useTitle from '../Components/Usetitle'
 
 const Float = () => {
+  useTitle("floatb")
   const { t } = useTranslation();
   const advantages = t("float.advantages", { returnObjects: true });
 

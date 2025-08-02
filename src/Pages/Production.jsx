@@ -23,8 +23,10 @@ import swiperbesh from '../img/img-logo/swiperbesh.jpg'
 import { Elements } from '../Elements'
 import { useTranslation } from 'react-i18next'
 import '../../Style/Style.css'
+import useTitle from '../Components/Usetitle'
 
 const Production = () => {
+  useTitle("productiona")
   const { t } = useTranslation();
   const advantages = t("production.advantages", { returnObjects: true });
 
