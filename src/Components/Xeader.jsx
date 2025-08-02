@@ -11,8 +11,12 @@ const Xeader = () => {
 
   // Har safar sahifa o'zgarsa (yangi route), menyuni yopamiz
   useEffect(() => {
-    setMenuOpen(false);
+    setMenuOpen(false); // menyuni yopish
+  
+    // sahifa tepaga scroll qilsin
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [location]);
+  
 
   const changeLang = (lang) => {
     i18n.changeLanguage(lang);
