@@ -112,9 +112,9 @@ const Home = () => {
           <p className="w-full text-xl max-w-[680px]  md:text-base md:max-w-[480px]">{t('description')}
           </p>
           <div>
-            <button className="bg-green-500 border inline-block border-black my-10 p-3 py-10 rounded-full hover:bg-green-700 hover:transition-all hover:duration-200 md:my-3">
+            <Link to='/services' className="bg-green-500 border inline-block border-black my-10 p-3 py-10 rounded-full hover:bg-green-700 hover:transition-all hover:duration-200 md:my-3">
               {t('button')}
-            </button>
+            </Link>
           </div>
         </div>
         <div className="col-lg-6 text-center md:mx-auto md:col-lg-0">
