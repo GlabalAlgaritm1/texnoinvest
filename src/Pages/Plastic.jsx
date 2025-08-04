@@ -5,21 +5,22 @@ import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 
-import rasm30 from '../img/img-logo/salom5.jpg'
+import rasm30 from '../img/img-logo/as1.png'
 import salom1 from '../img/img-logo/salom1.svg'
 import salom2 from '../img/img-logo/salom2.svg'
 import salom3 from '../img/img-logo/salom3.svg'
 import salom4 from '../img/img-logo/salom4.svg'
-import salom7 from '../img/img-logo/salom7.jpeg'
-import salom8 from '../img/img-logo/salom8.jpg'
-import salom9 from '../img/img-logo/salom9.jpg'
-import salom10 from '../img/img-logo/salom10.jpg'
-import swiperbir from '../img/img-logo/swiperbir.jpg'
-import swiperikki from '../img/img-logo/swiperikki.jpg'
-import swiperuch from '../img/img-logo/swiperuch.jpg'
-import swipertort from '../img/img-logo/swipertort.jpg'
-import swiperbesh from '../img/img-logo/swiperbesh.jpg'
 
+import salom7 from '../img/img-logo/as38.jpg'
+import salom8 from '../img/img-logo/as39.jpg'
+import salom9 from '../img/img-logo/as40.png'
+import salom10 from '../img/img-logo/as41.png'
+import swiperbir from '../img/img-logo/as42.jpg'
+import swiperikki from '../img/img-logo/as43.jpg'
+import swiperuch from '../img/img-logo/as44.jpg'
+import swipertort from '../img/img-logo/as45.jpg'
+import swiperbesh from '../img/img-logo/as46.jpg'
+import swiperolti from '../img/img-logo/as47.jpg'
 import { Elements } from '../Elements'
 import { useTranslation } from 'react-i18next'
 import useTitle from '../Components/Usetitle'
@@ -43,10 +44,10 @@ const Plastic = () => {
       {/* Title Section */}
       <div className={`${Elements.Container} flex lg:flex-row md:flex-col max-sm:flex-col items-center justify-between mx-auto max-md:gap-5 gap-10 md:mb-0 mb-28 px-4`}>
         <div className="w-full max-w-[400px] max-md:max-w-[500px] text-center max-md:text-left">
-          <h2 className="text-3xl max-sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight md:mb-1">
+          <h2 className="text-3xl max-sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight md:mb-60">
             {t("plastic.title")}
           </h2>
-          <p className='text-sm sm:text-base md:w-full max-sm:mb-52'>{t("plastic.description")}</p>
+          <p className='text-sm sm:text-base md:w-full max-sm:mb-32'>{t("plastic.description")}</p>
         </div>
 
         <div className="relative w-full max-w-[525px] h-auto max-md:h-0 sm:bottom-0 sm:mb-[200px] max-sm:bottom-[100px] max-sm:mb-[300px]">
@@ -120,7 +121,7 @@ const Plastic = () => {
           }}
           pagination={{ clickable: true }}
         >
-          {[swiperbir, swiperikki, swiperuch, swipertort, swiperbesh].map((img, i) => (
+          {[swiperbir, swiperikki, swiperuch, swipertort, swiperbesh,swiperolti].map((img, i) => (
             <SwiperSlide key={i} className="flex justify-center">
               <img
                 src={img}

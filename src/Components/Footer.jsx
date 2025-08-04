@@ -29,7 +29,7 @@ const Footer = () => {
             <Link to="/faq" className="text-lg hover:text-green-500">{t("menu.faq")}</Link>
             <Link to="/#news" className="text-lg hover:text-green-500">{t("menu.news")}</Link>
             <Link to="/career" className="text-lg hover:text-green-500">{t("menu.career")}</Link>
-            <Link to="/contact" className="text-lg hover:text-green-500">{t("menu.contacts")}</Link>
+            <Link to="/get" className="text-lg hover:text-green-500">{t("menu.contacts")}</Link>
           </nav>
         </div>
 

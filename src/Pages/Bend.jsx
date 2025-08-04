@@ -45,7 +45,7 @@ const Bend = () => {
       {/* Title Section */}
       <div className={`${Elements.Container} flex lg:flex-row md:flex-col max-sm:flex-col items-center justify-between mx-auto max-md:gap-5 gap-10 md:mb-0 mb-28 px-4`}>
         <div className="w-full max-w-[400px] max-md:max-w-[500px] text-center max-md:text-left">
-          <h2 className="text-3xl max-sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight md:mb-60">
+          <h2 className="text-3xl max-sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight md:mb-60 max-md:mb-60">
             {t("bend.title")}
           </h2>
         </div>

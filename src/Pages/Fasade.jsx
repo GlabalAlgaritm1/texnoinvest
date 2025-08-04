@@ -5,21 +5,23 @@ import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 
-import rasm30 from '../img/img-logo/salom5.jpg'
+import rasm30 from '../img/img-logo/as2.jpg'
 import salom1 from '../img/img-logo/salom1.svg'
 import salom2 from '../img/img-logo/salom2.svg'
 import salom3 from '../img/img-logo/salom3.svg'
 import salom4 from '../img/img-logo/salom4.svg'
-import salom7 from '../img/img-logo/salom7.jpeg'
-import salom8 from '../img/img-logo/salom8.jpg'
-import salom9 from '../img/img-logo/salom9.jpg'
-import salom10 from '../img/img-logo/salom10.jpg'
+
+import salom7 from '../img/img-logo/as3.png'
+import salom8 from '../img/img-logo/as4.jpg'
+import salom9 from '../img/img-logo/as5.png'
+import salom10 from '../img/img-logo/as6.png'
+
 import swiperbir from '../img/img-logo/swiperbir.jpg'
-import swiperikki from '../img/img-logo/swiperikki.jpg'
+import swiperikki from '../img/img-logo/as7.jpg'
 import swiperuch from '../img/img-logo/swiperuch.jpg'
 import swipertort from '../img/img-logo/swipertort.jpg'
-import swiperbesh from '../img/img-logo/swiperbesh.jpg'
-
+import swiperbesh from '../img/img-logo/as8.jpg'
+import swiperolti from '../img/img-logo/as9.jpg'
 import { Elements } from '../Elements'
 import { useTranslation } from 'react-i18next'
 import useTitle from '../Components/Usetitle'
@@ -30,7 +32,7 @@ const Fasade = () => {
   const { t } = useTranslation();
   const advantages = t("fasade.advantages", { returnObjects: true });
 
-  const [isImageLoading, setIsImageLoading] = useState(false);
+  const [isImageLoading, setIsImageLoading] = useState(false); 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -46,10 +48,10 @@ const Fasade = () => {
           <h2 className="text-3xl max-sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight md:mb-1">
             {t("fasade.title")}
           </h2>
-          <p className='text-sm sm:text-base md:w-full max-sm:mb-52'>{t("fasade.description")}</p>
+          <p className='text-sm sm:text-base md:w-full max-sm:mb-12'>{t("fasade.description")}</p>
         </div>
 
-        <div className="relative w-full max-w-[525px] h-auto max-md:h-0 sm:bottom-0 sm:mb-[200px] max-sm:bottom-[100px] max-sm:mb-[300px]">
+        <div className="relative w-full max-w-[525px] h-auto max-md:h-0 sm:bottom-0 sm:mb-[200px] max-sm:bottom-[0px] max-sm:mb-[300px]">
           <div className="absolute -left-3 md:-left-6 top-3 bottom-10 w-full h-full max-h-[500px] lg:bg-[#039355] lg:shadow-2xl lg:shadow-green-600 max-md:bg-transparent rotate-[7deg] z-0 rounded-sm"></div>
           <img src={rasm30} alt="faq visual" className="relative z-10 w-full h-auto left-2 md:left-3 max-sm:left-0 top-8 md:top-14 max-sm:top-0 object-cover rounded-sm shadow-2xl shadow-green-600 mb-24" />
         </div>

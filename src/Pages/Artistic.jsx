@@ -5,20 +5,23 @@ import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 
-import rasm30 from '../img/img-logo/salom5.jpg'
+import rasm30 from '../img/img-logo/as10.jpg'
+
 import salom1 from '../img/img-logo/salom1.svg'
 import salom2 from '../img/img-logo/salom2.svg'
 import salom3 from '../img/img-logo/salom3.svg'
 import salom4 from '../img/img-logo/salom4.svg'
-import salom7 from '../img/img-logo/salom7.jpeg'
-import salom8 from '../img/img-logo/salom8.jpg'
-import salom9 from '../img/img-logo/salom9.jpg'
-import salom10 from '../img/img-logo/salom10.jpg'
-import swiperbir from '../img/img-logo/swiperbir.jpg'
-import swiperikki from '../img/img-logo/swiperikki.jpg'
-import swiperuch from '../img/img-logo/swiperuch.jpg'
-import swipertort from '../img/img-logo/swipertort.jpg'
-import swiperbesh from '../img/img-logo/swiperbesh.jpg'
+
+import salom7 from '../img/img-logo/as11.jpg'
+import salom8 from '../img/img-logo/as12.jpg'
+import salom9 from '../img/img-logo/as13.jpg'
+import salom10 from '../img/img-logo/as14.png'
+import swiperbir from '../img/img-logo/as15.jpg'
+import swiperikki from '../img/img-logo/as16.jpg'
+import swiperuch from '../img/img-logo/as17.jpg'
+import swipertort from '../img/img-logo/as18.jpg'
+import swiperbesh from '../img/img-logo/as19.jpg'
+import swiperolti from '../img/img-logo/as20.jpg'
 
 import { Elements } from '../Elements'
 import { useTranslation } from 'react-i18next'
@@ -46,7 +49,7 @@ const Artistic = () => {
           <h2 className="text-3xl max-sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight md:mb-1">
             {t("artistic.title")}
           </h2>
-          <p className='text-sm sm:text-base md:w-full max-sm:mb-52'>{t("artistic.description")}</p>
+          <p className='text-sm sm:text-base md:w-full max-sm:mb-52 md:mb-52'>{t("artistic.description")}</p>
         </div>
 
         <div className="relative w-full max-w-[525px] h-auto max-md:h-0 sm:bottom-0 sm:mb-[200px] max-sm:bottom-[100px] max-sm:mb-[300px]">
@@ -120,7 +123,7 @@ const Artistic = () => {
           }}
           pagination={{ clickable: true }}
         >
-          {[swiperbir, swiperikki, swiperuch, swipertort, swiperbesh].map((img, i) => (
+          {[swiperbir, swiperikki, swiperuch, swipertort, swiperbesh,swiperolti].map((img, i) => (
             <SwiperSlide key={i} className="flex justify-center">
               <img
                 src={img}

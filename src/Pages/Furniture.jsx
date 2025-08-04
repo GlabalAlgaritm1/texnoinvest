@@ -5,15 +5,16 @@ import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 
-import rasm30 from '../img/img-logo/salom5.jpg'
+import rasm30 from '../img/img-logo/as33.jpg'
 import salom1 from '../img/img-logo/salom1.svg'
 import salom2 from '../img/img-logo/salom2.svg'
 import salom3 from '../img/img-logo/salom3.svg'
 import salom4 from '../img/img-logo/salom4.svg'
-import salom7 from '../img/img-logo/salom7.jpeg'
-import salom8 from '../img/img-logo/salom8.jpg'
-import salom9 from '../img/img-logo/salom9.jpg'
-import salom10 from '../img/img-logo/salom10.jpg'
+
+import salom7 from '../img/img-logo/as34.png'
+import salom8 from '../img/img-logo/as35.png'
+import salom9 from '../img/img-logo/as36.jpg'
+import salom10 from '../img/img-logo/as37.jpg'
 import swiperbir from '../img/img-logo/swiperbir.jpg'
 import swiperikki from '../img/img-logo/swiperikki.jpg'
 import swiperuch from '../img/img-logo/swiperuch.jpg'
@@ -46,7 +47,7 @@ const Furniture = () => {
           <h2 className="text-3xl max-sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight md:mb-1">
             {t("furniture.title")}
           </h2>
-          <p className='text-sm sm:text-base md:w-full max-sm:mb-52'>{t("furniture.description")}</p>
+          <p className='text-sm sm:text-base md:w-full max-sm:mb-32 md:mb-60'>{t("furniture.description")}</p>
         </div>
 
         <div className="relative w-full max-w-[525px] h-auto max-md:h-0 sm:bottom-0 sm:mb-[200px] max-sm:bottom-[100px] max-sm:mb-[300px]">
