@@ -80,6 +80,7 @@ const Career = () => {
             {/* Full Name */}
             <div className="relative w-full">
               <input
+                autoComplete='off'
                 type="text"
                 id="fullName"
                 name="fullName"
@@ -102,6 +103,7 @@ const Career = () => {
             {/* Email */}
             <div className="relative w-full">
               <input
+                autoComplete='off'
                 type="email"
                 id="email"
                 name="email"
@@ -124,6 +126,7 @@ const Career = () => {
             {/* Phone */}
             <div className="relative w-full my-7">
               <input
+                autoComplete='off'
                 type="tel"
                 id="phone"
                 name="phone"
@@ -165,6 +168,7 @@ const Career = () => {
           {/* Comments */}
           <div className="relative w-full mt-10">
             <textarea
+              autoComplete='off'
               id="comments"
               name="comments"
               placeholder="Comments"

@@ -44,10 +44,10 @@ const Plastic = () => {
       {/* Title Section */}
       <div className={`${Elements.Container} flex lg:flex-row md:flex-col max-sm:flex-col items-center justify-between mx-auto max-md:gap-5 gap-10 md:mb-0 mb-28 px-4`}>
         <div className="w-full max-w-[400px] max-md:max-w-[500px] text-center max-md:text-left">
-          <h2 className="text-3xl max-sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight md:mb-60">
+          <h2 className="text-3xl max-sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
             {t("plastic.title")}
           </h2>
-          <p className='text-sm sm:text-base md:w-full max-sm:mb-32'>{t("plastic.description")}</p>
+          <p className='text-sm sm:text-base md:w-full max-sm:mb-32 max-md:mb-32 md:mb-60'>{t("plastic.description")}</p>
         </div>
 
         <div className="relative w-full max-w-[525px] h-auto max-md:h-0 sm:bottom-0 sm:mb-[200px] max-sm:bottom-[100px] max-sm:mb-[300px]">

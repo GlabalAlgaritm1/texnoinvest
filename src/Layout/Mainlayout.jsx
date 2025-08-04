@@ -4,7 +4,7 @@ import Xeader from '../Components/Xeader'
 import Footer from '../Components/Footer'
 const Mainlayout = () => {
   return (
-    <div className='bg-[#181818] text-white'>
+    <div className='bg-[#181818] text-white select-none'>
       <Xeader />
       <main>
         <Outlet />

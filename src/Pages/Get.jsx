@@ -4,8 +4,8 @@ import { Elements } from '../Elements'
 import { useTranslation } from 'react-i18next'
 import useTitle from '../Components/Usetitle'
 
-const BOT_TOKEN = 'YOUR_BOT_TOKEN' // <-- O'zingizni token bilan almashtiring
-const CHAT_ID = 'YOUR_CHAT_ID'     // <-- O'zingizni chat ID bilan almashtiring
+const BOT_TOKEN = '7933237192:AAE9a0fJTlv1LraxYKBsVrPTzbXL_LssQio' // <-- O'zingizni token bilan almashtiring
+const CHAT_ID = '7764198922'     // <-- O'zingizni chat ID bilan almashtiring
 
 const Get = () => {
     const { t } = useTranslation()
@@ -141,6 +141,7 @@ const Get = () => {
                         {/* Full Name */}
                         <div className="relative w-full">
                             <input
+                                autoComplete='none'
                                 type="text"
                                 id="fullName"
                                 placeholder={t('your_name')}
@@ -162,6 +163,7 @@ const Get = () => {
                         {/* Email */}
                         <div className="relative w-full">
                             <input
+                                autoComplete='off'
                                 type="email"
                                 id="email"
                                 placeholder={t('your_email')}
@@ -183,6 +185,7 @@ const Get = () => {
                         {/* Phone */}
                         <div className="relative w-full">
                             <input
+                                autoComplete='off'
                                 type="tel"
                                 id="phone"
                                 placeholder={t('your_phone')}
@@ -204,6 +207,7 @@ const Get = () => {
                         {/* Subject of the Appeal */}
                         <div className="relative w-full">
                             <input
+                                autoComplete='off'
                                 type="text"
                                 id="subject"
                                 placeholder={t('subject')}
@@ -226,6 +230,7 @@ const Get = () => {
                     {/* Comments */}
                     <div className="relative w-full mt-10">
                         <textarea
+                            autoComplete='off'
                             id="comments"
                             placeholder={t('comment')}
                             value={comments}
